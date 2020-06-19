@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+  }
+  body{
+      background-color: #F5F7FA;
+      margin: 0px;
+      padding: 0%;
+  }
+  footer{
+      background-color: #161e2c;
+      font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+      -webkit-font-smoothing: antialiased;
+      padding: 0px 15px ;
+  }
+  .footer-contaner{
+   display: flex;
+    max-width: 1200px;
+    margin: auto;
+    flex-flow: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 32px 0px 56px;
+    border-bottom: 1px solid #2b3340;
+  }
+  .footer-left{
+    margin-right: 18px;
+  }
+  .footer-left img{
+      max-width: 150px;
+    
+  }
+  .footer-right{
+    display: flex;
+    flex-flow: nowrap;
+    flex: 0.8;
+    justify-content: space-between;
+    
+  }
+  .footer-right h4{
+      margin-top: 0px;
+      margin-bottom: 8px;
+      font-family: inherit;
+      -webkit-font-smoothing:inherit;
+  }
+  .header-text-style{
+    color: #f7f7f7;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+ 
+  .footer-cell{
+    min-width: 207px;
+
+  }
+  .footer-cell ul{
+    list-style: none;
+    padding: 0%;
+    margin-top: 0%;
+  }
+  .list-text-style{
+    font-size: 14px;
+    line-height: 1.6;
+    color: #bec0c2;
+    font-family: inherit;
+    -webkit-font-smoothing:inherit;
+}
+.list-text-style:hover{
+  text-decoration: underline;
+  color:  #f0f0f0;
+  cursor: pointer;
+}
+iframe{
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+.icons-container{
+  display: flex;
+  justify-content: space-between;
+}
+path{
+  fill: white;
+}
+.icons-container span:hover{
+  cursor: pointer;
+}
+#facebook-icon:hover  path{
+    fill: #3B5998;
+    
+}
+#twitter-icon:hover path{
+  fill: #1da1f2;
+  
+}
+#youtube-icon:hover path{
+  fill: #ff0000;
+  
+}
+  
+ 
+#insta-icon:hover path{
+  fill: #c32669;
+  
+}
+.copyright-container{
+  padding: 20px 0px;
+text-align: center;
+}
+.copyright-text-styl{
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 1.45;
+  color: #f7f7f7;
+  font-family: inherit;
+  -webkit-font-smoothing: inherit;
+}
+@media screen and (max-width: 878px) {
+  .footer-contaner{
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 711px) {
+
+  .footer-contaner{
+    display: block;
+  }
+  .footer-right{
+    flex-direction: column;
+  }
+  [class~='footer-cell']:last-of-type{
+    max-width: 251px;
+    
+  }
+  .footer-cell{
+   margin-bottom: 5px;
+  }
+}
