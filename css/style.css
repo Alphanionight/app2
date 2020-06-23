@@ -359,6 +359,11 @@ body,html {
     .content > h3 {
         font-size: 14px;
     }
+
+    .btn-info-2 > span{
+        padding: 7px 37px;
+        font-size: 14px;
+    }
 }
 
 @media only screen and (max-width: 800px){
