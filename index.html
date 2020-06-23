@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta name="format-detection" content="telephone=no">
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Master Qualité du Logiciel</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -32,44 +34,53 @@
     <script src="js/views/EventComponent.js"></script>
     <script src="js/main.js"></script>
 </head>
+
 <body id="body">
     <div class="nav-menu">
-        <a href="index.html" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)" onMouseUp="btnUp(this)">
+        <a href="index.html" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)"
+            onMouseDown="btnDown(this)" onMouseUp="btnUp(this)">
             <svg id="menu-icon" width="24px" height="24px">
-                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M0 0h24v24H0V0z" fill="none" />
                 <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0
                     .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0
-                    .55.45 1 1 1h3c.55 0 1-.45 1-1z"/>
+                    .55.45 1 1 1h3c.55 0 1-.45 1-1z" />
             </svg>Acceuil
         </a>
-        <a class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Activ_main()">
+        <a class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)"
+            onMouseUp="btnUp(this)" onClick="Activ_main()">
             <svg id="menu-icon" width="24px" height="24px">
-                <path d="M0 0h24v24H0V0z" fill="none"/>
+                <path d="M0 0h24v24H0V0z" fill="none" />
                 <path d="M12 9h4c.55 0 1-.45 1-1s-.45-1-1-1h-4c-.55 0-1 .45-1 1s.45 1 1 1zm0 4h4c.55 0 1-.45 
                 1-1s-.45-1-1-1h-4c-.55 0-1 .45-1 1s.45 1 1 1zm0 4h4c.55 0 1-.45 1-1s-.45-1-1-1h-4c-.55 0-1 
                 .45-1 1s.45 1 1 1zM7 7h2v2H7zm0 4h2v2H7zm0 4h2v2H7zM20 3H4c-.55 0-1 .45-1 1v16c0 .55.45 1 1 
-                1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 16H5V5h14v14z"/>
+                1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 16H5V5h14v14z" />
             </svg>Activités
         </a>
-        <a href="#" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Event_main()">
+        <a href="#" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)"
+            onMouseUp="btnUp(this)" onClick="Event_main()">
             <svg id="menu-icon" width="24px" height="24px">
                 <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 
-                2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/><path d="M0 0h24v24H0z" fill="none"/>
+                2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
+                <path d="M0 0h24v24H0z" fill="none" />
             </svg>Evenements
         </a>
-        <a href="#" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Part_main()">
+        <a href="#" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)"
+            onMouseUp="btnUp(this)" onClick="Part_main()">
             <svg id="menu-icon" fill="black" width="24px" height="24px">
-                <path d="M0 0h24v24H0z" fill="none"/>
-                <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0
-                -4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0
+                -4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
             </svg>Partenaires
         </a>
-        <a href="#" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Laur_main()">
+        <a href="#" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)"
+            onMouseUp="btnUp(this)" onClick="Laur_main()">
             <svg id="menu-icon" fill="black" width="24px" height="24px">
-                <path d="M0 0h24v24H0z" fill="none"/><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 
                 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33
                 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 
-                3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
             </svg>Lauréats
         </a>
     </div>
@@ -79,19 +90,24 @@
             <img src="images/MQL-logo.png" alt="">
         </div>
         <div class="btn-panel">
-            <a href="index.html" id="acceuil" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)" onMouseDown="btnDown(this)" onMouseUp="btnUp(this)">
+            <a href="index.html" id="acceuil" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)"
+                onMouseDown="btnDown(this)" onMouseUp="btnUp(this)">
                 Acceuil
             </a>
-            <a href="#" id="activité" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)" onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Activ_main()">
+            <a href="#" id="activité" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)"
+                onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Activ_main()">
                 Activités
             </a>
-            <a href="#" id="evenements" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)" onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Event_main()">
+            <a href="#" id="evenements" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)"
+                onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Event_main()">
                 Evenements
             </a>
-            <a href="#" id="partenaires" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)" onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Part_main()">
+            <a href="#" id="partenaires" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)"
+                onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Part_main()">
                 Partenaires
             </a>
-            <a href="#" id="lauréats" class="btn" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Laur_main()">
+            <a href="#" id="lauréats" class="btn" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)"
+                onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Laur_main()">
                 Lauréats
             </a>
         </div>
@@ -117,8 +133,13 @@
             </div>
             <div class="div-body">
                 <h2 class="div-title">
-                    <span class="first-word">&Agrave Propos</span>
-                    <span class="second-word">De MQL</span>
+                    <div>
+                        <div>
+                            <span class="first-word">&Agrave Propos</span>
+                            <span class="second-word">&nbsp;De MQL</span>
+                        </div>
+                        <div class="underline"></div>
+                    </div>
                 </h2>
                 <div class="def-text">
                     «Le Master Qualité du Logiciel» de la Faculté des Sciences Dhar EL Mahraz (FSDM) de Fès – Université
@@ -139,8 +160,14 @@
         <div class="container">
             <div class="div-body">
                 <h2 class="div-title">
-                    <span class="first-word">Coordonateur:</span>
-                    <span class="second-word">N.Chenfour</span>
+                    <div>
+                        <div>
+                            <span class="first-word">Coordonateur:</span>
+                            <span class="second-word">&nbsp;N.Chenfour</span>
+                        </div>
+                        <div class="underline"></div>
+                    </div>
+                    
                 </h2>
                 <div class="def-text">
                     «Le Master Qualité du Logiciel» de la Faculté des Sciences Dhar EL Mahraz (FSDM) de Fès – Université
@@ -159,7 +186,12 @@
 
     <div class="list-container">
         <div class="div-title">
-            <div class="second-word lined bold">Professeurs</div>
+            <div>
+                <div>
+                    <div class="second-word bold">Professeurs</div>
+                </div>
+                <div class="underline"></div>
+            </div>
         </div>
         <div class="list">
             <div class="element">
@@ -210,7 +242,7 @@
                 <img src="images/footer/Layer 2.png">
             </div>
             <div class="footer-right">
-             
+
                 <div class="footer-cell">
                     <h4 class="header-text-style">
                         Liens
@@ -219,47 +251,63 @@
                         <li class="list-text-style">Cérémonie de remise de diplôme </li>
                         <li class="list-text-style">Journée d'entreprenariat</li>
                         <li class="list-text-style">Compétitions</li>
-                      </ul>
+                    </ul>
                 </div>
                 <div class="footer-cell">
                     <h4 class="header-text-style">
-                        À propos 
-                    </h4 >
+                        À propos
+                    </h4>
                     <ul>
                         <li class="list-text-style">Présentation</li>
                         <li class="list-text-style">Contenu de la formation</li>
                         <li class="list-text-style">Conditions d'accés</li>
-                      </ul>
+                    </ul>
                 </div>
                 <div class="footer-cell">
                     <h4 class="header-text-style">
                         Retrouvez-nous
-                    </h4 >
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.406530286729!2d-4.9790549847071714!3d34.033441526167856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b5f7be79403%3A0x64ed183ba63abde7!2sFacult%C3%A9%20des%20Sciences%20Dhar%20El%20Mehraz!5e0!3m2!1sen!2sma!4v1592143457833!5m2!1sen!2sma" width="250" height="150" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </h4>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.406530286729!2d-4.9790549847071714!3d34.033441526167856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b5f7be79403%3A0x64ed183ba63abde7!2sFacult%C3%A9%20des%20Sciences%20Dhar%20El%20Mehraz!5e0!3m2!1sen!2sma!4v1592143457833!5m2!1sen!2sma"
+                        width="250" height="150" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
                     <div class="icons-container">
                         <span id="facebook-icon">
-                            <svg class="Icon-image" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <svg class="Icon-image" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <g stroke="none" stroke-width="1" fill-rule="evenodd">
                                     <polygon id="Mask" opacity="0" fill="none" points="2 2 22 2 22 22 2 22"></polygon>
-                                    <path  d="M22,12 C22,6.47714844 17.5228516,2 12,2 C6.47714844,2 2,6.47714844 2,12 C2,16.9912891 5.65685547,21.1283203 10.4375,21.8785156 L10.4375,14.890625 L7.8984375,14.890625 L7.8984375,12 L10.4375,12 L10.4375,9.796875 C10.4375,7.290625 11.9304297,5.90625 14.2146484,5.90625 C15.3087305,5.90625 16.453125,6.1015625 16.453125,6.1015625 L16.453125,8.5625 L15.1921484,8.5625 C13.9499023,8.5625 13.5625,9.33333984 13.5625,10.1241602 L13.5625,12 L16.3359375,12 L15.8925781,14.890625 L13.5625,14.890625 L13.5625,21.8785156 C18.3431445,21.1283203 22,16.9912891 22,12"></path>
+                                    <path
+                                        d="M22,12 C22,6.47714844 17.5228516,2 12,2 C6.47714844,2 2,6.47714844 2,12 C2,16.9912891 5.65685547,21.1283203 10.4375,21.8785156 L10.4375,14.890625 L7.8984375,14.890625 L7.8984375,12 L10.4375,12 L10.4375,9.796875 C10.4375,7.290625 11.9304297,5.90625 14.2146484,5.90625 C15.3087305,5.90625 16.453125,6.1015625 16.453125,6.1015625 L16.453125,8.5625 L15.1921484,8.5625 C13.9499023,8.5625 13.5625,9.33333984 13.5625,10.1241602 L13.5625,12 L16.3359375,12 L15.8925781,14.890625 L13.5625,14.890625 L13.5625,21.8785156 C18.3431445,21.1283203 22,16.9912891 22,12">
+                                    </path>
                                 </g>
                             </svg>
                         </span>
                         <span id="twitter-icon">
-                            <svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path  d="M8.192 21c-2.28 0-4.404-.668-6.192-1.815 2.144.252 4.282-.342 5.98-1.672-1.768-.034-3.26-1.202-3.772-2.806.633.12 1.256.085 1.823-.07-1.942-.39-3.282-2.14-3.24-4.01.545.302 1.17.484 1.83.505C2.822 9.93 2.313 7.555 3.37 5.738c1.992 2.444 4.97 4.053 8.326 4.22C11.106 7.434 13.024 5 15.63 5c1.163 0 2.212.49 2.95 1.276.92-.18 1.785-.517 2.565-.98-.3.944-.942 1.736-1.775 2.235.817-.097 1.596-.314 2.32-.635-.542.807-1.228 1.52-2.016 2.088C19.93 14.665 15.694 21 8.192 21z"></path>
+                            <svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M8.192 21c-2.28 0-4.404-.668-6.192-1.815 2.144.252 4.282-.342 5.98-1.672-1.768-.034-3.26-1.202-3.772-2.806.633.12 1.256.085 1.823-.07-1.942-.39-3.282-2.14-3.24-4.01.545.302 1.17.484 1.83.505C2.822 9.93 2.313 7.555 3.37 5.738c1.992 2.444 4.97 4.053 8.326 4.22C11.106 7.434 13.024 5 15.63 5c1.163 0 2.212.49 2.95 1.276.92-.18 1.785-.517 2.565-.98-.3.944-.942 1.736-1.775 2.235.817-.097 1.596-.314 2.32-.635-.542.807-1.228 1.52-2.016 2.088C19.93 14.665 15.694 21 8.192 21z">
+                                </path>
                             </svg>
                         </span>
                         <span id="youtube-icon">
-                            <svg class="Icon-image" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <g transform="translate(2.000000, 5.000000)" fill-rule="nonzero" stroke="none" stroke-width="1">
-                                  <path d="M16.3458333,0.153435525 C13.3425,-0.0515616237 6.65333333,-0.0507283019 3.65416667,0.153435525 C0.406666667,0.375099108 0.0241666667,2.33673849 0,7.5 C0.0241666667,12.654095 0.403333333,14.6240676 3.65416667,14.8465645 C6.65416667,15.0507283 13.3425,15.0515616 16.3458333,14.8465645 C19.5933333,14.6249009 19.9758333,12.6632615 20,7.5 C19.9758333,2.34590503 19.5966667,0.37593243 16.3458333,0.153435525 Z M7.5,10.833287 L7.5,4.16671303 L14.1666667,7.49416675 L7.5,10.833287 L7.5,10.833287 Z" id="Shape"></path>
+                            <svg class="Icon-image" width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g transform="translate(2.000000, 5.000000)" fill-rule="nonzero" stroke="none"
+                                    stroke-width="1">
+                                    <path
+                                        d="M16.3458333,0.153435525 C13.3425,-0.0515616237 6.65333333,-0.0507283019 3.65416667,0.153435525 C0.406666667,0.375099108 0.0241666667,2.33673849 0,7.5 C0.0241666667,12.654095 0.403333333,14.6240676 3.65416667,14.8465645 C6.65416667,15.0507283 13.3425,15.0515616 16.3458333,14.8465645 C19.5933333,14.6249009 19.9758333,12.6632615 20,7.5 C19.9758333,2.34590503 19.5966667,0.37593243 16.3458333,0.153435525 Z M7.5,10.833287 L7.5,4.16671303 L14.1666667,7.49416675 L7.5,10.833287 L7.5,10.833287 Z"
+                                        id="Shape"></path>
                                 </g>
-                              </svg>
+                            </svg>
                         </span>
                         <span id="insta-icon">
-                            <svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M15 12c0 1.657-1.343 3-3 3s-3-1.342-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3zm4.327-3.636c.043.948.052 1.233.052 3.636s-.01 2.688-.053 3.637c-.112 2.42-1.248 3.58-3.69 3.69-.948.042-1.233.052-3.637.052-2.403 0-2.69-.01-3.636-.053-2.446-.11-3.58-1.273-3.69-3.69-.043-.95-.053-1.234-.053-3.637s.01-2.688.054-3.636c.11-2.42 1.248-3.58 3.69-3.69.948-.043 1.233-.052 3.636-.052s2.69.01 3.637.052c2.44.11 3.578 1.27 3.69 3.69zM16.62 12c.002-2.553-2.07-4.622-4.62-4.622-2.553 0-4.622 2.07-4.622 4.622 0 2.553 2.07 4.622 4.622 4.622 2.553 0 4.622-2.07 4.622-4.622zm1.264-4.804c0-.596-.484-1.08-1.08-1.08-.596 0-1.08.484-1.08 1.08 0 .597.483 1.08 1.08 1.08.597 0 1.08-.483 1.08-1.08zM21 12c0-2.444-.01-2.75-.054-3.71-.147-3.265-1.963-5.085-5.235-5.235C14.75 3.01 14.446 3 12 3c-2.445 0-2.75.01-3.71.054-3.27.15-5.085 1.963-5.236 5.235C3.01 9.25 3 9.556 3 12c0 2.445.01 2.75.054 3.71.15 3.27 1.964 5.086 5.236 5.236.96.044 1.265.054 3.71.054 2.445 0 2.75-.01 3.71-.054 3.266-.15 5.09-1.963 5.236-5.236.044-.96.054-1.265.054-3.71z"></path>
+                            <svg class="Icon-image" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M15 12c0 1.657-1.343 3-3 3s-3-1.342-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3zm4.327-3.636c.043.948.052 1.233.052 3.636s-.01 2.688-.053 3.637c-.112 2.42-1.248 3.58-3.69 3.69-.948.042-1.233.052-3.637.052-2.403 0-2.69-.01-3.636-.053-2.446-.11-3.58-1.273-3.69-3.69-.043-.95-.053-1.234-.053-3.637s.01-2.688.054-3.636c.11-2.42 1.248-3.58 3.69-3.69.948-.043 1.233-.052 3.636-.052s2.69.01 3.637.052c2.44.11 3.578 1.27 3.69 3.69zM16.62 12c.002-2.553-2.07-4.622-4.62-4.622-2.553 0-4.622 2.07-4.622 4.622 0 2.553 2.07 4.622 4.622 4.622 2.553 0 4.622-2.07 4.622-4.622zm1.264-4.804c0-.596-.484-1.08-1.08-1.08-.596 0-1.08.484-1.08 1.08 0 .597.483 1.08 1.08 1.08.597 0 1.08-.483 1.08-1.08zM21 12c0-2.444-.01-2.75-.054-3.71-.147-3.265-1.963-5.085-5.235-5.235C14.75 3.01 14.446 3 12 3c-2.445 0-2.75.01-3.71.054-3.27.15-5.085 1.963-5.236 5.235C3.01 9.25 3 9.556 3 12c0 2.445.01 2.75.054 3.71.15 3.27 1.964 5.086 5.236 5.236.96.044 1.265.054 3.71.054 2.445 0 2.75-.01 3.71-.054 3.266-.15 5.09-1.963 5.236-5.236.044-.96.054-1.265.054-3.71z">
+                                </path>
                             </svg>
                         </span>
                     </div>
@@ -267,9 +315,12 @@
             </div>
         </div>
         <div class="copyright-container">
-            <div class="copyright-text-styl"> Freelancer ® is a registered Trademark of Freelancer Technology Pty Limited (ACN 141 959 042) </div>
-            <div class="copyright-text-styl"> Copyright © 2020 Freelancer Technology Pty Limited (ACN 141 959 042) </div>
+            <div class="copyright-text-styl"> Freelancer ® is a registered Trademark of Freelancer Technology Pty
+                Limited (ACN 141 959 042) </div>
+            <div class="copyright-text-styl"> Copyright © 2020 Freelancer Technology Pty Limited (ACN 141 959 042)
+            </div>
         </div>
     </footer>
 </body>
+
 </html>
