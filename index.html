@@ -35,7 +35,7 @@
     <script src="js/main.js"></script>
 </head>
 
-<body id="body">
+<body id="body" onload="listen()">
     <div class="nav-menu">
         <a href="index.html" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)"
             onMouseDown="btnDown(this)" onMouseUp="btnUp(this)">
@@ -90,24 +90,19 @@
             <img src="images/MQL-logo.png" alt="">
         </div>
         <div class="btn-panel">
-            <a href="index.html" id="acceuil" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)"
-                onMouseDown="btnDown(this)" onMouseUp="btnUp(this)">
+            <a href="index.html" id="acceuil" class="btn">
                 Acceuil
             </a>
-            <a href="#" id="activité" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)"
-                onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Activ_main()">
+            <a href="#" id="activité" class="btn" onClick="Activ_main()">
                 Activités
             </a>
-            <a href="#" id="evenements" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)"
-                onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Event_main()">
+            <a href="#" id="evenements" class="btn"  onClick="Event_main()">
                 Evenements
             </a>
-            <a href="#" id="partenaires" class="btn" onMouseOver="btnHover(this)" onmouseout="btnOut(this)"
-                onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Part_main()">
+            <a href="#" id="partenaires" class="btn" onClick="Part_main()">
                 Partenaires
             </a>
-            <a href="#" id="lauréats" class="btn" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)"
-                onMouseDown="btnDown(this)" onMouseUp="btnUp(this)" onClick="Laur_main()">
+            <a id="lauréats" class="btn" onclick="Laur_main()">
                 Lauréats
             </a>
         </div>
@@ -167,7 +162,7 @@
                         </div>
                         <div class="underline"></div>
                     </div>
-                    
+
                 </h2>
                 <div class="def-text">
                     «Le Master Qualité du Logiciel» de la Faculté des Sciences Dhar EL Mahraz (FSDM) de Fès – Université
@@ -197,37 +192,37 @@
                     <img src="images/Laureats/aucune.png" alt="">
                     <div class="nom">Noureddine Chenfour</div>
                 </div>
-    
+
                 <div class="element">
                     <img src="images/Laureats/aucune.png" alt="">
                     <div class="nom">Noureddine Chenfour</div>
                 </div>
-    
+
                 <div class="element">
                     <img src="images/Laureats/aucune.png" alt="">
                     <div class="nom">Noureddine Chenfour</div>
                 </div>
-    
+
                 <div class="element">
                     <img src="images/Laureats/aucune.png" alt="">
                     <div class="nom">Noureddine Chenfour</div>
                 </div>
-    
+
                 <div class="element">
                     <img src="images/Laureats/aucune.png" alt="">
                     <div class="nom">Noureddine Chenfour</div>
                 </div>
-    
+
                 <div class="element">
                     <img src="images/Laureats/aucune.png" alt="">
                     <div class="nom">Noureddine Chenfour</div>
                 </div>
-    
+
                 <div class="element">
                     <img src="images/Laureats/aucune.png" alt="">
                     <div class="nom">Noureddine Chenfour</div>
                 </div>
-    
+
                 <div class="element">
                     <img src="images/Laureats/aucune.png" alt="">
                     <div class="nom">Noureddine Chenfour</div>
@@ -236,8 +231,23 @@
         </div>
     </div>
 
-    <div class="present-section">
-        
+    <div class="other-pages">
+        <div class="laureat-section">
+            <div class="laureat-header">
+                <h2 class="laureat-title">Laureat</h2>
+                <div class="wrap">
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Que cherchez-vous?">
+                        <button class="searchButton" onclick="searsh()">
+                            <i class="fa"><img src="images/searsh.png"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="laureat-container"></div>
+            </div>
+        </div>
     </div>
 
     <footer>

@@ -1,7 +1,7 @@
 var view;
 
 function Part_main(){
-    var others = document.getElementById("others");
+    var others = document.getElementById("other-pages");
     others.innerHTML = "";
     var service = new PartenaireService();
     service.load(partenaires);
@@ -10,16 +10,19 @@ function Part_main(){
 }
 
 function Laur_main(){
-    var others = document.getElementById("others");
-    others.innerHTML = "";
+    var others = document.getElementsByClassName("other-pages")[0];
+    hideChilds(others);
+    var laureat_section = document.getElementsByClassName("laureat-section")[0];
+    laureat_section.style.display = "block";
     var service = new LaureatService();
     service.load(laureats);
     view = new LaureatComponent(service);
     view.printLaurs();
+    window.scrollTo(0, 0); 
 }
 
 function Activ_main(){
-    var others = document.getElementById("others");
+    var others = document.getElementById("other-pages");
     others.innerHTML = "";
     var service = new ActivityService();
     service.load(activities);
@@ -28,7 +31,7 @@ function Activ_main(){
 }
 
 function Event_main(){
-    var others = document.getElementById("others");
+    var others = document.getElementById("other-pages");
     others.innerHTML = "";
     var service = new EventService();
     service.load(events);
@@ -36,106 +39,43 @@ function Event_main(){
     view.printEvent();
 }
 
-function btnHover(obj){
-    var svg = obj.firstElementChild;
-    svg.style.fill = "white";
-    obj.style.color = "white";
-    obj.style['background-color'] = "#35456c";
-}
-
-function btnOut(obj){
-    var svg = obj.firstElementChild;
-    svg.style.fill = "#35456c";
-    obj.style.color = "#35456c";
-    obj.style['background-color'] = "white";
-}
-
-function btnDown(obj){
-    obj.style['background-color'] = "#1d44af";
-}
-
-function btnUp(obj){
-    obj.style['background-color'] = "#35456c";
-}
-
-var menuOpened = false;
-function toggleMenu(){
-    var menu = document.querySelector(".nav-menu");
-    if(menuOpened == true){
-        menuOpened = false;
-        menu.classList.remove("nav-menu--open");
-    } else {
-        menuOpened = true;
-        menu.classList.toggle("nav-menu--open");
+function hideChilds(parent){
+    var childs = parent.children;
+    for (let i = 0; i < childs.length; i++) {
+        const element = childs[i];
+        element.style.display = "none";
     }
 }
 
-window.addEventListener("mouseup", function(event){
-    var menu = document.querySelector(".nav-menu");
-    if(event.target != menu){
-        menu.classList.remove("nav-menu--open");
-    }
-});
-
-function openPresentation(){
-    var others = document.getElementById("others");
-    others.innerHTML = "";
-
-    var acceuil_section = document.getElementById("acceuil-section");
-    acceuil_section.style.display = "block";
+function searsh(){
+    var text = document.getElementsByClassName("searchTerm")[0].value;
+    console.log(text);
     
-    var container_form = document.querySelector(".container-form");
-    container_form.style.display = "flex";
-    var section_top = document.querySelector(".section-top");
-    section_top.style.display = "none";
-    var containerr = document.querySelector(".containerr");
-    containerr.style.display = "none";
-    var hist_section1 = document.querySelector(".hist-section1");
-    hist_section1.style.display = "none";
-    var container = document.querySelector(".container-cond");
-    container.style.display = "none";
-    var hist_section2 = document.querySelector(".hist-section2");
-    hist_section2.style.display = "none";
+    var result = [];
+    for (let i = 0; i < laureats.length; i++) {
+        const element = laureats[i];
+        if(element.nom.toUpperCase().includes(text.toUpperCase()) 
+        || element.prenom.toUpperCase().includes(text.toUpperCase()) 
+        || element.email.toUpperCase().includes(text.toUpperCase()) 
+        || element.promotion.toUpperCase().includes(text.toUpperCase())
+        || element.ent_stage.toUpperCase().includes(text.toUpperCase()) 
+        || element.ent_contrat.toUpperCase().includes(text.toUpperCase()) 
+        || element.ent_actuelle.toUpperCase().includes(text.toUpperCase()) 
+        || element.poste_actuelle.toUpperCase().includes(text.toUpperCase()) 
+        || element.localisation.toUpperCase().includes(text.toUpperCase())){
+            result.push(element);
+        }
+    }
+    view.printResult(result);
+    console.log(result.length + "idk");
 }
 
-function openHistorique(){
-    var others = document.getElementById("others");
-    others.innerHTML = "";
-
-    var acceuil_section = document.getElementById("acceuil-section");
-    acceuil_section.style.display = "block";
-
-    var containerr = document.querySelector(".containerr");
-    containerr.style.display = "block";
-    var hist_section1 = document.querySelector(".hist-section1");
-    hist_section1.style.display = "none";
-    var container_form = document.querySelector(".container-form");
-    container_form.style.display = "none";
-    var section_top = document.querySelector(".section-top");
-    section_top.style.display = "none";
-    var container = document.querySelector(".container-cond");
-    container.style.display = "none";
-    var hist_section2 = document.querySelector(".hist-section2");
-    hist_section2.style.display = "none";
-}
-
-function openCondition(){
-    var others = document.getElementById("others");
-    others.innerHTML = "";
-
-    var acceuil_section = document.getElementById("acceuil-section");
-    acceuil_section.style.display = "block";
-
-    var container = document.querySelector(".container-cond");
-    container.style.display = "block";
-    var hist_section2 = document.querySelector(".hist-section2");
-    hist_section2.style.display = "none";
-    var containerr = document.querySelector(".containerr");
-    containerr.style.display = "none";
-    var hist_section1 = document.querySelector(".hist-section1");
-    hist_section1.style.display = "none";
-    var container_form = document.querySelector(".container-form");
-    container_form.style.display = "none";
-    var section_top = document.querySelector(".section-top");
-    section_top.style.display = "none";
+function listen(){
+    var input = document.getElementsByClassName("searchTerm")[0];
+    input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementsByClassName("searchButton")[0].click();
+        }
+    });
 }

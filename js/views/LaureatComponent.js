@@ -6,140 +6,119 @@ LaureatComponent.prototype.get = function(id){
     return document.getElementById(id);
 }
 
+LaureatComponent.prototype.createElementList = function(icon, label, value){
+    var element_list = document.createElement("div");
+    element_list.setAttribute("class", "element-list");
+
+    var object = document.createElement("object");
+    object.setAttribute("data", icon);
+    object.setAttribute("type", "image/svg+xml");
+
+    var div = document.createElement("div");
+
+    var title = document.createElement("label");
+    title.appendChild(document.createTextNode(label));
+
+    var span = document.createElement("span");
+    span.appendChild(document.createTextNode(value));
+
+    div.appendChild(title);
+    div.appendChild(span);
+
+    element_list.appendChild(object);
+    element_list.appendChild(div);
+
+    return element_list;
+}
+
+LaureatComponent.prototype.SMButton = function(link ,icon){
+    var card_icon = document.createElement("span");
+    card_icon.setAttribute("class", "card-icon");
+
+    var a = document.createElement("a");
+    a.setAttribute("href", link);
+
+    var span = document.createElement("span");
+
+    var object = document.createElement("object");
+    object.setAttribute("data", icon);
+    object.setAttribute("type", "image/svg+xml");
+
+    span.appendChild(object);
+    a.appendChild(span);
+    card_icon.appendChild(a);
+
+    return card_icon;
+}
+
 LaureatComponent.prototype.addLaur = function(laureat){
-    var laur_div = document.createElement("div");
-    laur_div.setAttribute("class", "laur-div");
-    
-    var laur_pho = document.createElement("div");
-    laur_pho.setAttribute("class", "laur-pho");
+    var laureat_card = document.createElement("div");
+    laureat_card.setAttribute("class", "laureat-card");
 
-    var photo = document.createElement("img");
-    if(laureat.photo != "null"){
-        photo.setAttribute("src", laureat.photo);
+    var laureat_img = document.createElement("div");
+    laureat_img.setAttribute("class", "laureat-img");
+
+    var img = document.createElement("img");
+    if(laureat.photo !== "null"){
+        img.setAttribute("src", laureat.photo);
     } else {
-        photo.setAttribute("src", "images/Laureats/aucune.png");
+        img.setAttribute("src", "images/Laureats/aucune.png");
     }
-    photo.setAttribute("id", "photo");
-    laur_pho.appendChild(photo);
 
-    var laur_info = document.createElement("div");
-    laur_info.setAttribute("class", "laur-info");
+    laureat_img.appendChild(img);
+    laureat_card.appendChild(laureat_img);
 
-    var laur_name = document.createElement("div");
-    laur_name.setAttribute("class", "laur-name");
+    var under_img_container = document.createElement("div");
+    under_img_container.setAttribute("class", "under-img-container");
 
-    var b = document.createElement("b");
-    b.appendChild(document.createTextNode("Nom:\xa0"));
+    var h4 = document.createElement("h4");
+    h4.setAttribute("class", "name-container");
+    h4.appendChild(document.createTextNode(laureat.nom + " " + laureat.prenom));
 
-    laur_name.appendChild(b);
-    laur_name.appendChild(document.createTextNode(laureat.nom + "\xa0" + laureat.prenom));
+    var h6 = document.createElement("h6");
+    h6.setAttribute("class", "job-title");
+    h6.appendChild(document.createTextNode(laureat.poste_actuelle));
 
-    var laur_promo = document.createElement("div");
-    laur_promo.setAttribute("class", "laur-promo");
+    under_img_container.appendChild(h4);
+    under_img_container.appendChild(h6);
 
-    var b = document.createElement("b");
-    b.appendChild(document.createTextNode("Promotion:\xa0"));
+    under_img_container.appendChild(this.createElementList("images/Laureats/icon1.svg", "Promotion:\xa0", laureat.promotion));
+    under_img_container.appendChild(this.createElementList("images/Laureats/icon2.svg", "Entreprise de stage:\xa0", laureat.ent_stage));
+    under_img_container.appendChild(this.createElementList("images/Laureats/icon5.svg", "Entrepeise de signature contrat CDI:\xa0", laureat.ent_contrat));
+    under_img_container.appendChild(this.createElementList("images/Laureats/icon3.svg", "Entrepeise actuelle:\xa0", laureat.ent_actuelle));
+    under_img_container.appendChild(this.createElementList("images/Laureats/icon4.svg", "Localisation actuelle:\xa0", laureat.localisation));
 
-    laur_promo.appendChild(b);
-    laur_promo.appendChild(document.createTextNode(laureat.promotion));
+    var social_media = document.createElement("div");
+    social_media.setAttribute("class", "social-media");
+    social_media.appendChild(this.SMButton(laureat.linkedIn, "images/Laureats/linkedin.svg"));
+    if(laureat.email != "")
+    social_media.appendChild(this.SMButton("mailto:" + laureat.email, "images/Laureats/gmail.svg"));
 
-    var laur_email = document.createElement("div");
-    laur_email.setAttribute("class", "laur-email");
+    under_img_container.appendChild(social_media);
+    laureat_card.appendChild(under_img_container);
 
-    var b = document.createElement("b");
-    b.appendChild(document.createTextNode("Email:\xa0"));
-
-    laur_email.appendChild(b);
-    laur_email.appendChild(document.createTextNode(laureat.email));
-
-    var laur_ent_stage = document.createElement("div");
-    laur_ent_stage.setAttribute("class", "laur-ent-stage");
-
-    var b = document.createElement("b");
-    b.appendChild(document.createTextNode("Entreprise de stage:\xa0"));
-
-    laur_ent_stage.appendChild(b);
-    laur_ent_stage.appendChild(document.createTextNode(laureat.ent_stage));
-
-    var laur_ent_contrat = document.createElement("div");
-    laur_ent_contrat.setAttribute("class", "laur-ent-contrat");
-
-    var b = document.createElement("b");
-    b.appendChild(document.createTextNode("Entreprise de signature de Contract CDI:\xa0"));
-
-    laur_ent_contrat.appendChild(b);
-    laur_ent_contrat.appendChild(document.createTextNode(laureat.ent_contrat));
-
-    var laur_ent_actuelle = document.createElement("div");
-    laur_ent_actuelle.setAttribute("class", "laur-ent-actuelle");
-
-    var b = document.createElement("b");
-     b.appendChild(document.createTextNode("Entreprise actuelle:\xa0"));
-
-     laur_ent_actuelle.appendChild(b);
-     laur_ent_actuelle.appendChild(document.createTextNode(laureat.ent_actuelle));
-
-    var laur_post_actuel = document.createElement("div");
-    laur_post_actuel.setAttribute("class", "laur-post-actuel");
-
-    var b = document.createElement("b");
-    b.appendChild(document.createTextNode("Poste actuelle:\xa0"));
-
-    laur_post_actuel.appendChild(b);
-    laur_post_actuel.appendChild(document.createTextNode(laureat.poste_actuelle));
-
-    var laur_local = document.createElement("div");
-    laur_local.setAttribute("class", "laur-local");
-
-    var b = document.createElement("b");
-    b.appendChild(document.createTextNode("Localisation actuelle:\xa0"));
-
-    laur_local.appendChild(b);
-    laur_local.appendChild(document.createTextNode(laureat.localisation));
-
-
-    laur_info.appendChild(laur_name);
-    laur_info.appendChild(laur_promo);
-    laur_info.appendChild(laur_email);
-    laur_info.appendChild(laur_ent_stage);
-    laur_info.appendChild(laur_ent_contrat);
-    laur_info.appendChild(laur_ent_actuelle);
-    laur_info.appendChild(laur_post_actuel);
-    laur_info.appendChild(laur_local);
-    
-    laur_div.appendChild(laur_pho);
-    laur_div.appendChild(laur_info);
-
-    return laur_div;
+    return laureat_card;
 }
 
 LaureatComponent.prototype.printLaurs = function(){
-    var oldSection = document.getElementById("acceuil-section");
+    var oldSection = document.getElementsByClassName("acceuil-section")[0];
     oldSection.style.display = "none";
 
-    var parent = document.getElementById("others");
-
-    var laur_section = document.createElement("section");
-    laur_section.setAttribute("class", "laur-section");
-    
-    var div_title = document.createElement("h2");
-    div_title.setAttribute("class", "div-title");
-
-    var laur_list = document.createElement("div");
-    laur_list.setAttribute("class", "laur-list");
-
-    var first_word = document.createElement("div");
-    first_word.setAttribute("class", "first-word");
-
-    first_word.appendChild(document.createTextNode("Lauréats\xa0"));
-    div_title.appendChild(first_word);
-    div_title.appendChild(document.createTextNode("MQL"));
-
-    laur_section.appendChild(div_title);
+    var parent = document.getElementsByClassName("laureat-container")[0];
+    parent.innerHTML = "";
 
     for(let i = 0; i < this.service.size(); i++){
-        laur_list.appendChild(this.addLaur(this.service.get(i)));
+        parent.appendChild(this.addLaur(this.service.get(i)));
     }
-    laur_section.appendChild(laur_list);
-    parent.appendChild(laur_section);
+}
+
+LaureatComponent.prototype.printResult = function(arr){
+    if(arr.length != 0 ){
+        var parent = document.getElementsByClassName("laureat-container")[0];
+        parent.innerHTML = "";
+
+        for(let i = 0; i < arr.length; i++){
+            parent.appendChild(this.addLaur(arr[i]));
+        }
+    }
 }

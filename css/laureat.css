@@ -1,77 +1,215 @@
-.laur-section {
-    margin-top: 100px;
-    margin-bottom: 25px;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  box-sizing: border-box;
+}
+body{
+    background-color: #F5F7FA;
+    margin: 0px;
+    padding: 0%;
 }
 
-.laur-list {
+.laureat-section {
+  display: none;
+  margin-top: 65px;
+}
+
+.laureat-title{
+  color: #35456c ;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin-bottom: 0.5rem;
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+}
+.laureat-title::after{
+  content: " ";
+  border-bottom: 3px #d93139  solid;
+  width: 100%;
+  margin: auto;
+  display: block;
+  margin-top: 11px;
+  background:#d93139;
+  fill: #d93139;
+}
+.search {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.searchTerm {
+  width: 100%;
+  
+  border: 3px solid #35456c ;
+  border-right: none;
+  padding: 5px;
+
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.searchTerm:focus{
+  color: #35456c ;
+}
+
+.searchButton {
+  width: 40px;
+  border: 1px solid #35456c ;
+  background: #35456c ;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+.wrap{
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+
+}
+.fa img{
+  display: block;
+}
+
+
+.laureat-container,.laureat-header{
+  max-width: 1200px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  flex-flow: wrap;
+}
+.laureat-header{
+  align-items: center;
+}
+.laureat-card{
+    margin-top: 70px;
+    width: 32%;
+
+    border-radius: 6px;
+    background: #fff;
+    word-wrap: break-word;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+.laureat-img{
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     justify-content: center;
-}
-
-.laur-div {
-    background-color: white;
-    padding: 20px;
-    width: 25%;
-    max-width: 350px;
-    height: auto;
-    line-height: 20px;
-    justify-self: center;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
-}
-
-.laur-pho {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    width: 110px;
-    height: 110px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-#photo {
     width: 100px;
     height: 100px;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 100px;
+    position: relative;
+    margin: auto;
+    top: -50px;
+    overflow: hidden;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
-.laur-info {
-    display: flex;
-    flex-direction: column;
-    font-size: 12px;
+.laureat-img > img {
+  width: 100px;
+  height: 100px;
 }
 
-@media only screen and (max-width: 1080px){
-    .laur-div {
-        width: 35%;
-    }
+.under-img-container{
+    margin-top: -40px;
+    padding: 10px 15px;
+
+}
+.name-container{
+    text-align: center;
+    margin: 0px 0px;
+    font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+}
+.job-title{
+    margin-top: 7px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #868e96!important;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+.element-list{
+   margin-top: 13px;
+   display: flex;
+   align-items: center;
 }
 
-@media only screen and (max-width: 700px){
-    .laur-list {
-        display: block;
-    }
-    .laur-div {
-        width: 60%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.element-list > object {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 2%;
 }
 
-@media only screen and (max-width: 600px){
-    .laur-list {
-        display: block;
-    }
-    .laur-div {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.element-list label{
+  font-weight: 300;
+}
+.element-list path{
+    fill : #414447!important;
+}
+.element-list * {
+  vertical-align: middle;
+  color: #414447!important;
+  font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.element-list svg {
+    margin-right: 8px;
+
+}
+.element-list span{
+  font-weight: 200;
+}
+.social-media{
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+}
+.card-icon{
+    margin-right: 10px;
+}
+
+.card-icon > a {
+  display: inline-block;
+  position: relative; 
+  z-index: 1;
+}
+
+.card-icon > a > span {
+  display: inline-block;
+}
+
+.card-icon > a > span > object {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative; 
+  z-index: -1
+}
+@media screen and (max-width: 940px) {
+  .laureat-card{
+    width: 48.5%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .laureat-card{
+    width: 100%;
+    max-width: 500px;
+
+   
+  }
+  .laureat-container{
+    justify-content: center;
+  }
+
+  .laureat-header{
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .wrap{
+    width: 100%;
+    justify-content: center;
+  }
+
+
 }
