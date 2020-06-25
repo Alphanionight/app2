@@ -8,6 +8,7 @@
         content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Master Qualité du Logiciel</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/partenaires.css">
     <link rel="stylesheet" href="css/laureat.css">
@@ -36,75 +37,525 @@
 </head>
 
 <body id="body" onload="listen()">
-    <div class="nav-menu">
-        <a href="index.html" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)"
-            onMouseDown="btnDown(this)" onMouseUp="btnUp(this)">
-            <svg id="menu-icon" width="24px" height="24px">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0
-                    .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0
-                    .55.45 1 1 1h3c.55 0 1-.45 1-1z" />
-            </svg>Acceuil
-        </a>
-        <a class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)"
-            onMouseUp="btnUp(this)" onClick="Activ_main()">
-            <svg id="menu-icon" width="24px" height="24px">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path d="M12 9h4c.55 0 1-.45 1-1s-.45-1-1-1h-4c-.55 0-1 .45-1 1s.45 1 1 1zm0 4h4c.55 0 1-.45 
-                1-1s-.45-1-1-1h-4c-.55 0-1 .45-1 1s.45 1 1 1zm0 4h4c.55 0 1-.45 1-1s-.45-1-1-1h-4c-.55 0-1 
-                .45-1 1s.45 1 1 1zM7 7h2v2H7zm0 4h2v2H7zm0 4h2v2H7zM20 3H4c-.55 0-1 .45-1 1v16c0 .55.45 1 1 
-                1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zm-1 16H5V5h14v14z" />
-            </svg>Activités
-        </a>
-        <a href="#" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)"
-            onMouseUp="btnUp(this)" onClick="Event_main()">
-            <svg id="menu-icon" width="24px" height="24px">
-                <path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 
-                2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
-                <path d="M0 0h24v24H0z" fill="none" />
-            </svg>Evenements
-        </a>
-        <a href="#" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)"
-            onMouseUp="btnUp(this)" onClick="Part_main()">
-            <svg id="menu-icon" fill="black" width="24px" height="24px">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path
-                    d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0
-                -4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" />
-            </svg>Partenaires
-        </a>
-        <a href="#" class="nav-link" onMouseOver="btnHover(this)" onMouseOut="btnOut(this)" onMouseDown="btnDown(this)"
-            onMouseUp="btnUp(this)" onClick="Laur_main()">
-            <svg id="menu-icon" fill="black" width="24px" height="24px">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 
-                1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33
-                0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 
-                3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
-            </svg>Lauréats
-        </a>
+    <div id="popup">
+        <div class="container_popup_menu" >
+            <div id="about_user">
+                <div id="container_of_data">
+                    <div id="containair_of_img">
+                        <img class="img_user" src="images/mql.png">
+                    </div>
+                </div>
+            </div>
+            <div id="container_sub">
+
+                <div id="parent_sub" onclick="toggleSubMenu()" class="slid_menu_list hover_back ">
+                    <span class="drop_menu_ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                            enable-background="new 0 0 511.995 511.995" height="16"
+                            viewBox="0 0 511.995 511.995" width="18">
+                            <g>
+                                <path fill="#A1A7B3" id="ddp"
+                                    d="m507.308 236.641-198.98-198.99c-28.86-28.85-75.8-28.85-104.66 0l-198.98 198.99c-6.25 6.25-6.25 16.38 0 22.63 6.24 6.25 16.38 6.25 22.62 0l12.69-12.69v203.4c0 25.405 20.595 46 46 46h80c5.523 0 10-4.477 10-10v-148c0-27.614 22.386-50 50-50h60c27.614 0 50 22.386 50 50v148c0 5.523 4.477 10 10 10h80c25.405 0 46-20.595 46-46v-203.4l12.69 12.69c3.12 3.12 7.22 4.69 11.31 4.69s8.19-1.57 11.31-4.69c6.25-6.25 6.25-16.38 0-22.63z" />
+                            </g>
+                        </svg>
+                    </span>
+                    <span class=" botton_name name_option_drop">
+                        Acceuil
+                    </span>
+
+                    <b id="rot" class="button_for_cat_slid" style="margin-bottom: -7px; transform: rotate(0deg);">
+                    </b>
+                </div>
+                <div id="sub_menu">
+                    <a>
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                Contact
+                            </span>
+                        </div>
+                    </a><a>
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                Contact
+                            </span>
+                        </div>
+                    </a>
+                    <a>
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                Contact
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <a>
+                <div class="list_div hover_back">
+                    <span class="drop_menu_ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" id="Capa_1" x="0px" y="0px" width="18" height="16" viewBox="0 0 47 47"
+                                style="enable-background:new 0 0 47 47;" xml:space="preserve" class="">
+                                <g>
+                                    <g>
+                                        <g id="Layer_1_155_">
+                                            <g>
+                                                <path
+                                                    d="M26.198,8.368H10.176c-1.18,0-2.137,0.957-2.137,2.136c0,1.179,0.957,2.136,2.137,2.136h16.022     c1.182,0,2.137-0.957,2.137-2.136C28.334,9.325,27.379,8.368,26.198,8.368z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                                <path
+                                                    d="M28.334,18.515c0-1.18-0.955-2.136-2.137-2.136H10.176c-1.18,0-2.137,0.957-2.137,2.136c0,1.18,0.957,2.137,2.137,2.137     h16.022C27.379,20.652,28.334,19.695,28.334,18.515z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                                <path
+                                                    d="M18.188,28.663c1.18,0,2.136-0.957,2.136-2.136c0-1.18-0.956-2.137-2.136-2.137h-8.012c-1.18,0-2.137,0.957-2.137,2.137     s0.957,2.136,2.137,2.136H18.188z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                                <path
+                                                    d="M34.314,35.93l-2.241,1.479v5.318H4.301V4.273h27.772v8.442l4.273-7.401V2.136c0-1.18-0.957-2.136-2.137-2.136H2.164     c-1.18,0-2.136,0.957-2.136,2.136v42.729c0,1.18,0.956,2.136,2.136,2.136h32.045c1.181,0,2.138-0.957,2.138-2.136V33.09     l-1.021,1.766C35.077,35.287,34.727,35.658,34.314,35.93z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                                <path
+                                                    d="M46.947,9.894c-0.044-0.192-0.495-1.918-3.213-3.488c-2.718-1.569-4.438-1.097-4.628-1.038     c-0.255,0.081-0.47,0.253-0.604,0.485L25.15,28.979c-0.083,0.145-0.132,0.306-0.142,0.472l-0.5,8.345     c-0.024,0.404,0.182,0.786,0.531,0.989c0.352,0.202,0.785,0.188,1.123-0.033l6.977-4.606c0.139-0.09,0.254-0.213,0.337-0.356     L46.829,10.66C46.963,10.428,47.004,10.156,46.947,9.894z M28.854,35.055c-0.355-0.287-0.758-0.558-1.191-0.809     c-0.435-0.251-0.871-0.462-1.297-0.628l0.149-2.502c0.557,0.073,1.383,0.299,2.432,0.903c1.048,0.605,1.655,1.209,1.999,1.654     L28.854,35.055z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                                <path
+                                                    d="M14.922,38.534c0.07,0.429,0.565,0.562,0.896,0.7c0.32,0.135,0.702-0.121,0.968-0.25c1.63-0.793,3.838,0.139,5.584,0.139     c1.033,0,1.033-1.602,0-1.602c-2.036,0-3.73-0.515-5.748-0.182c0-0.117-0.043-0.275-0.169-0.49     c-0.377-0.645-0.857-0.828-1.338-0.75c-0.032-0.076-0.063-0.152-0.108-0.229c-0.126-0.206-0.302-0.309-0.5-0.352     c0.563-0.984,0.926-2.025,0.557-2.867c-0.113-0.256-0.434-0.387-0.692-0.397c-1.07-0.04-1.988,1.083-2.676,1.757     c-1.721,1.687-3.237,3.602-4.704,5.508c-0.63,0.819,0.763,1.615,1.383,0.81c1.3-1.688,2.677-3.327,4.159-4.86     c-0.357,0.586-0.736,1.161-1.135,1.715c-0.57,0.881,0.791,1.631,1.383,0.809c0.141-0.215,0.32-0.37,0.516-0.503     c-0.039,0.099-0.079,0.196-0.119,0.296c0.002,0,0.004,0.001,0.006,0.002c-0.031,0.064-0.062,0.128-0.087,0.189     c-0.358,0.897,0.979,1.308,1.465,0.616c0.123-0.174,0.237-0.36,0.34-0.555C14.896,38.172,14.893,38.352,14.922,38.534z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                    </span>
+                    <span class=" botton_name name_option_drop">
+                        Activités
+                    </span>
+                </div>
+            </a>
+            <a>
+                <div id="link_contact_drop" class="list_div hover_back ">
+                    <span class=" drop_menu_ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1_1_"
+                                    enable-background="new 0 0 64 64" height="16" viewBox="0 0 64 64" width="18">
+                                    <g>
+                                        <path
+                                            d="m54 11c0-2.20917-1.79083-4-4-4h-1v3c0 1.10455-.89545 2-2 2h-2c1.10455 0 2-.89545 2-2v-6c0-1.10461-.89545-2-2-2s-2 .89539-2 2v3h-5v3c0 1.10455-.89545 2-2 2h-2c1.10455 0 2-.89545 2-2v-6c0-1.10461-.89545-2-2-2s-2 .89539-2 2v3h-6v3c0 1.10455-.89545 2-2 2h-2c1.10455 0 2-.89545 2-2v-6c0-1.10461-.89545-2-2-2s-2 .89539-2 2v3h-5v3c0 1.10455-.89545 2-2 2h-2c1.10455 0 2-.89545 2-2v-6c0-1.10461-.89545-2-2-2s-2 .89539-2 2v3h-3c-2.20917 0-4 1.79083-4 4v6h52z"
+                                            data-original="#000000" class="active-path" data-old_color="#000000"
+                                            fill="#A1A7B3" />
+                                        <path
+                                            d="m51 40c-6.07513 0-11 4.92487-11 11s4.92487 11 11 11 11-4.92487 11-11-4.92487-11-11-11zm0 13c-.25604 0-.49884-.05249-.72388-.1402l-3.65112 2.92145-1.25-1.5625 3.65479-2.92322c-.01453-.09717-.02979-.19427-.02979-.29553 0-.73846.40472-1.37616 1-1.7226v-6.2774h2v6.2774c.59528.34644 1 .98413 1 1.7226 0 1.10455-.89545 2-2 2z"
+                                            data-original="#000000" class="active-path" data-old_color="#000000"
+                                            fill="#A1A7B3" />
+                                        <path
+                                            d="m6 56h32.99957c-.64221-1.53955-.99957-3.22766-.99957-5 0-5.40692 3.30231-10.04034 7.99884-12h-4.99884v-6h6v5.63361c1.26093-.40766 2.60339-.63361 4-.63361 1.03436 0 2.0354.13354 3 .36182v-19.36182h-52v33c0 2.20996 1.78998 4 4 4zm35-34h6v6h-6zm-11 0h6v6h-6zm0 11h6v6h-6zm0 11h6v6h-6zm-11-22h6v6h-6zm0 11h6v6h-6zm0 11h6v6h-6zm-11-22h6v6h-6zm0 11h6v6h-6zm0 11h6v6h-6z"
+                                            data-original="#000000" class="active-path" data-old_color="#000000"
+                                            fill="#A1A7B3" />
+                                    </g>
+                                </svg>
+                    </span>
+                    <span class=" botton_name name_option_drop">
+                        Événements
+                    </span>
+                </div>
+            </a>
+            <a>
+                <div class="list_div hover_back">
+                    <span class=" drop_menu_ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+                                    style="enable-background:new 0 0 512 512;" xml:space="preserve" width="18"
+                                    height="16">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M466.75,242.763V86.25c0-2.346-0.643-4.493-1.6-6.469c0.577-1.599,1.6-3.01,1.6-4.781c0-6.694-4.438-12.583-10.884-14.429    l-210-60c-2.695-0.762-5.537-0.762-8.232,0l-210,60C21.188,62.417,16.75,68.306,16.75,75c0,6.694,4.438,12.583,10.884,14.429    l79.116,22.604v17.752c0,17.065,9.478,32.754,24.141,39.961c67.236,33.047,154.453,33.032,221.719,0.015    c14.663-7.207,24.141-22.896,24.141-39.976v-17.752l60-17.142v147.872c-17.422,6.213-30,22.707-30,42.237v30    c0,8.291,6.709,15,15,15h60c8.291,0,15-6.709,15-15v-30C496.75,265.47,484.172,248.977,466.75,242.763z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M364.322,198.685C326.617,217.215,283.712,227,240.25,227c-43.462,0-86.382-9.8-124.102-28.33    c-3.684-1.811-6.735-4.495-10.009-6.887c3.204,53.99,32.252,99.803,73.304,123.274c0,0,21.057,9.949,27.636,11.818l0.026-0.049    c10.655,3.038,21.625,5.175,33.144,5.175c10.547,0,25.57-2.105,40.582-7.648c6.915-2.462,20.176-9.265,20.176-9.265    c41.077-23.463,70.145-69.29,73.353-123.299C371.077,194.185,368.017,196.87,364.322,198.685z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M240.25,362c-12.092,0-23.729-1.866-35.068-4.603L240.25,410l34.871-52.553C263.841,360.152,252.273,362,240.25,362z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M326.595,335.096c-0.266,0.179-0.564,0.302-0.829,0.48L313.15,354.5c0,0.698-57.513,86.718-57.9,87.299V512h195    c8.291,0,15-6.709,15-15C465.25,415.086,404.961,347.846,326.595,335.096z M360.25,452h-30c-8.291,0-15-6.709-15-15    c0-8.291,6.709-15,15-15h30c8.291,0,15,6.709,15,15C375.25,445.291,368.541,452,360.25,452z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M154.461,335.402c-0.244-0.163-0.516-0.276-0.76-0.441C75.418,347.798,15.25,415.137,15.25,497c0,8.291,6.709,15,15,15    h195v-70.201C157.271,339.655,171.143,360.508,154.461,335.402z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                    </span>
+                    <span class=" botton_name name_option_drop">
+                        Lauréats
+                    </span>
+
+                </div>
+            </a>
+            <a>
+                <div class="list_div hover_back">
+                    <span class="drop_menu_ico">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512"
+                                    style="enable-background:new 0 0 512 512;" xml:space="preserve" width="18"
+                                    height="16">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M123.733,130.133c-17.067-17.067-89.6-21.333-113.067-23.467c-2.133,0-4.267,0-6.4,2.133C2.133,110.933,0,115.2,0,117.333    v192C0,315.733,4.267,320,10.667,320h64c4.267,0,8.533-2.133,10.667-6.4c0-6.4,38.4-119.467,42.667-174.933    C128,136.533,128,132.267,123.733,130.133z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M352,181.333c-21.333-6.4-40.533-14.933-57.6-21.333c-38.4-17.067-55.467-8.533-89.6,25.6    c-14.933,14.933-25.6,36.267-23.467,44.8c0,2.133,0,2.133,4.267,4.267c10.667,4.267,25.6,6.4,40.533-17.067    c2.133-2.133,4.267-4.267,8.533-4.267c6.4,0,8.533-2.133,14.933-4.267c4.267-2.133,8.533-4.267,14.933-6.4    c2.133,0,2.133,0,4.267,0c2.133,0,6.4,2.133,8.533,2.133C288,215.467,307.2,230.4,326.4,247.467    c29.867,23.467,59.733,49.067,74.667,68.267h2.133C388.267,273.067,362.667,200.533,352,181.333z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M501.333,128c-83.2,0-130.133,21.333-132.267,21.333c-2.133,2.133-4.267,4.267-6.4,6.4c0,2.133,0,6.4,2.133,8.533    c12.8,21.333,55.467,138.667,61.867,168.533c2.133,4.267,6.4,8.533,10.667,8.533h64c6.4,0,10.667-4.267,10.667-10.667v-192    C512,132.267,507.733,128,501.333,128z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M386.133,337.067c-8.533-19.2-44.8-46.933-76.8-72.533C292.267,249.6,275.2,236.8,262.4,226.133    c-2.133,2.133-6.4,2.133-6.4,4.267c-6.4,2.133-8.533,4.267-17.067,4.267C221.867,256,200.533,264.533,177.067,256    c-10.667-2.133-17.067-10.667-19.2-19.2c-4.267-21.333,14.933-51.2,29.867-66.133h-42.667c-8.533,42.667-23.467,98.133-34.133,128    c8.533,8.533,17.067,19.2,23.467,23.467c40.533,34.133,87.467,68.267,96,74.667c6.4,4.267,19.2,8.533,25.6,8.533    c2.133,0,4.267,0,6.4,0L228.267,371.2c-4.267-4.267-4.267-10.667,0-14.933s10.667-4.267,14.933,0l42.667,42.667    c4.267,4.267,8.533,2.133,12.8,2.133c6.4-2.133,8.533-6.4,10.667-12.8L260.267,339.2c-4.267-4.267-4.267-10.667,0-14.933    s10.667-4.267,14.933,0l53.333,53.333c2.133,2.133,10.667,2.133,17.067,0c2.133-2.133,6.4-4.267,8.533-8.533L294.4,309.333    c-4.267-4.267-4.267-10.667,0-14.933s10.667-4.267,14.933,0l61.867,61.867c4.267,2.133,8.533,0,12.8-2.133    C386.133,352,390.4,345.6,386.133,337.067z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                    </span>
+                    <span class=" botton_name name_option_drop">
+                        Partenaires
+                    </span>
+
+                </div>
+            </a>
+        </div>
     </div>
 
-    <div class="nav">
-        <div class="logo">
-            <img src="images/MQL-logo.png" alt="">
-        </div>
-        <div class="btn-panel">
-            <a href="index.html" id="acceuil" class="btn">
-                Acceuil
-            </a>
-            <a href="#" id="activité" class="btn" onClick="Activ_main()">
-                Activités
-            </a>
-            <a href="#" id="evenements" class="btn"  onClick="Event_main()">
-                Evenements
-            </a>
-            <a href="#" id="partenaires" class="btn" onClick="Part_main()">
-                Partenaires
-            </a>
-            <a id="lauréats" class="btn" onclick="Laur_main()">
-                Lauréats
-            </a>
+    <div id="header_menu">
+        <div id="header_menu_center">
+            <div onclick="toggleMenu()" id="div_small_menu">
+                <div class="child_container hover_back ">
+                    <div class="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                            id="Capa_1" x="0px" y="0px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;"
+                            xml:space="preserve" width="18" height="16" class="">
+                            <g>
+                                <g>
+                                    <rect y="2" width="50" height="4" data-original="#000000" class="active-path"
+                                        data-old_color="#000000" fill="#A1A7B3" />
+                                    <rect y="16" width="50" height="4" data-original="#000000" class="active-path"
+                                        data-old_color="#000000" fill="#A1A7B3" />
+                                    <rect y="30" width="50" height="4" data-original="#000000" class="active-path"
+                                        data-old_color="#000000" fill="#A1A7B3" />
+                                    <rect y="44" width="50" height="4" data-original="#000000" class="active-path"
+                                        data-old_color="#000000" fill="#A1A7B3" />
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div id="header_logo-container">
+                <a id="header_link_img" href="#"><img id="web-logo" src="images/MQL-logo.png"> </a>
+            </div>
+            <div id="header_right">
+                <div class="dropbutton for_display_drop">
+                    <div class="child_container hover_back ">
+                        <div class="botton">
+                            <span id="logo_item" class="logo_item">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1"
+                                    enable-background="new 0 0 511.995 511.995" height="16"
+                                    viewBox="0 0 511.995 511.995" width="18">
+                                    <g>
+                                        <path
+                                            d="m507.308 236.641-198.98-198.99c-28.86-28.85-75.8-28.85-104.66 0l-198.98 198.99c-6.25 6.25-6.25 16.38 0 22.63 6.24 6.25 16.38 6.25 22.62 0l12.69-12.69v203.4c0 25.405 20.595 46 46 46h80c5.523 0 10-4.477 10-10v-148c0-27.614 22.386-50 50-50h60c27.614 0 50 22.386 50 50v148c0 5.523 4.477 10 10 10h80c25.405 0 46-20.595 46-46v-203.4l12.69 12.69c3.12 3.12 7.22 4.69 11.31 4.69s8.19-1.57 11.31-4.69c6.25-6.25 6.25-16.38 0-22.63z" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <div class="botton_name">Acceuil</div>
+                        </div>
+                    </div>
+                    <div class="drop_menu" id="first_drop">
+                        <div class="triangle">
+                        </div>
+                        <a>
+                            <div id="link_contact_drop" class="list_div hover_back ">
+                                <span class=" botton_name name_option_drop">
+                                    Historique
+                                </span>
+                            </div>
+                        </a>
+                        <a>
+                            <div id="link_contact_drop" class="list_div hover_back ">
+                                <span class=" botton_name name_option_drop">
+                                    Présentation
+                                </span>
+                            </div>
+                        </a>
+                        <a>
+                            <div id="link_contact_drop" class="list_div hover_back ">
+                                <span class=" botton_name name_option_drop">
+                                    Contenu de la Formation
+                                </span>
+                            </div>
+                        </a>
+                        <a>
+                            <div id="link_contact_drop" class="list_div hover_back ">
+                                <span class=" botton_name name_option_drop">
+                                    Conditions d'accès
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div id="link_contact" class="dropbutton">
+                    <div class="child_container hover_back">
+                        <div class="botton">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" id="Capa_1" x="0px" y="0px" width="18" height="16" viewBox="0 0 47 47"
+                                style="enable-background:new 0 0 47 47;" xml:space="preserve" class="">
+                                <g>
+                                    <g>
+                                        <g id="Layer_1_155_">
+                                            <g>
+                                                <path
+                                                    d="M26.198,8.368H10.176c-1.18,0-2.137,0.957-2.137,2.136c0,1.179,0.957,2.136,2.137,2.136h16.022     c1.182,0,2.137-0.957,2.137-2.136C28.334,9.325,27.379,8.368,26.198,8.368z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                                <path
+                                                    d="M28.334,18.515c0-1.18-0.955-2.136-2.137-2.136H10.176c-1.18,0-2.137,0.957-2.137,2.136c0,1.18,0.957,2.137,2.137,2.137     h16.022C27.379,20.652,28.334,19.695,28.334,18.515z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                                <path
+                                                    d="M18.188,28.663c1.18,0,2.136-0.957,2.136-2.136c0-1.18-0.956-2.137-2.136-2.137h-8.012c-1.18,0-2.137,0.957-2.137,2.137     s0.957,2.136,2.137,2.136H18.188z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                                <path
+                                                    d="M34.314,35.93l-2.241,1.479v5.318H4.301V4.273h27.772v8.442l4.273-7.401V2.136c0-1.18-0.957-2.136-2.137-2.136H2.164     c-1.18,0-2.136,0.957-2.136,2.136v42.729c0,1.18,0.956,2.136,2.136,2.136h32.045c1.181,0,2.138-0.957,2.138-2.136V33.09     l-1.021,1.766C35.077,35.287,34.727,35.658,34.314,35.93z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                                <path
+                                                    d="M46.947,9.894c-0.044-0.192-0.495-1.918-3.213-3.488c-2.718-1.569-4.438-1.097-4.628-1.038     c-0.255,0.081-0.47,0.253-0.604,0.485L25.15,28.979c-0.083,0.145-0.132,0.306-0.142,0.472l-0.5,8.345     c-0.024,0.404,0.182,0.786,0.531,0.989c0.352,0.202,0.785,0.188,1.123-0.033l6.977-4.606c0.139-0.09,0.254-0.213,0.337-0.356     L46.829,10.66C46.963,10.428,47.004,10.156,46.947,9.894z M28.854,35.055c-0.355-0.287-0.758-0.558-1.191-0.809     c-0.435-0.251-0.871-0.462-1.297-0.628l0.149-2.502c0.557,0.073,1.383,0.299,2.432,0.903c1.048,0.605,1.655,1.209,1.999,1.654     L28.854,35.055z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                                <path
+                                                    d="M14.922,38.534c0.07,0.429,0.565,0.562,0.896,0.7c0.32,0.135,0.702-0.121,0.968-0.25c1.63-0.793,3.838,0.139,5.584,0.139     c1.033,0,1.033-1.602,0-1.602c-2.036,0-3.73-0.515-5.748-0.182c0-0.117-0.043-0.275-0.169-0.49     c-0.377-0.645-0.857-0.828-1.338-0.75c-0.032-0.076-0.063-0.152-0.108-0.229c-0.126-0.206-0.302-0.309-0.5-0.352     c0.563-0.984,0.926-2.025,0.557-2.867c-0.113-0.256-0.434-0.387-0.692-0.397c-1.07-0.04-1.988,1.083-2.676,1.757     c-1.721,1.687-3.237,3.602-4.704,5.508c-0.63,0.819,0.763,1.615,1.383,0.81c1.3-1.688,2.677-3.327,4.159-4.86     c-0.357,0.586-0.736,1.161-1.135,1.715c-0.57,0.881,0.791,1.631,1.383,0.809c0.141-0.215,0.32-0.37,0.516-0.503     c-0.039,0.099-0.079,0.196-0.119,0.296c0.002,0,0.004,0.001,0.006,0.002c-0.031,0.064-0.062,0.128-0.087,0.189     c-0.358,0.897,0.979,1.308,1.465,0.616c0.123-0.174,0.237-0.36,0.34-0.555C14.896,38.172,14.893,38.352,14.922,38.534z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <div class="botton_name">Activités
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropbutton for_display_drop">
+                    <div class="child_container hover_back ">
+                        <div class="botton">
+                            <span id="logo_item" class="logo_item">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1_1_"
+                                    enable-background="new 0 0 64 64" height="16" viewBox="0 0 64 64" width="18">
+                                    <g>
+                                        <path
+                                            d="m54 11c0-2.20917-1.79083-4-4-4h-1v3c0 1.10455-.89545 2-2 2h-2c1.10455 0 2-.89545 2-2v-6c0-1.10461-.89545-2-2-2s-2 .89539-2 2v3h-5v3c0 1.10455-.89545 2-2 2h-2c1.10455 0 2-.89545 2-2v-6c0-1.10461-.89545-2-2-2s-2 .89539-2 2v3h-6v3c0 1.10455-.89545 2-2 2h-2c1.10455 0 2-.89545 2-2v-6c0-1.10461-.89545-2-2-2s-2 .89539-2 2v3h-5v3c0 1.10455-.89545 2-2 2h-2c1.10455 0 2-.89545 2-2v-6c0-1.10461-.89545-2-2-2s-2 .89539-2 2v3h-3c-2.20917 0-4 1.79083-4 4v6h52z"
+                                            data-original="#000000" class="active-path" data-old_color="#000000"
+                                            fill="#A1A7B3" />
+                                        <path
+                                            d="m51 40c-6.07513 0-11 4.92487-11 11s4.92487 11 11 11 11-4.92487 11-11-4.92487-11-11-11zm0 13c-.25604 0-.49884-.05249-.72388-.1402l-3.65112 2.92145-1.25-1.5625 3.65479-2.92322c-.01453-.09717-.02979-.19427-.02979-.29553 0-.73846.40472-1.37616 1-1.7226v-6.2774h2v6.2774c.59528.34644 1 .98413 1 1.7226 0 1.10455-.89545 2-2 2z"
+                                            data-original="#000000" class="active-path" data-old_color="#000000"
+                                            fill="#A1A7B3" />
+                                        <path
+                                            d="m6 56h32.99957c-.64221-1.53955-.99957-3.22766-.99957-5 0-5.40692 3.30231-10.04034 7.99884-12h-4.99884v-6h6v5.63361c1.26093-.40766 2.60339-.63361 4-.63361 1.03436 0 2.0354.13354 3 .36182v-19.36182h-52v33c0 2.20996 1.78998 4 4 4zm35-34h6v6h-6zm-11 0h6v6h-6zm0 11h6v6h-6zm0 11h6v6h-6zm-11-22h6v6h-6zm0 11h6v6h-6zm0 11h6v6h-6zm-11-22h6v6h-6zm0 11h6v6h-6zm0 11h6v6h-6z"
+                                            data-original="#000000" class="active-path" data-old_color="#000000"
+                                            fill="#A1A7B3" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <div class="botton_name">Événements</div>
+                        </div>
+                    </div>
+                    <div class="drop_menu" id="first_drop">
+                        <div class="triangle">
+                        </div>
+                        <a>
+                            <div id="link_contact_drop" class="list_div hover_back ">
+                                <span class=" botton_name name_option_drop">
+                                    Cérémonie de remise des diplômes
+                                </span>
+                            </div>
+                        </a>
+                        <a>
+                            <div id="link_contact_drop" class="list_div hover_back ">
+                                <span class=" botton_name name_option_drop">
+                                    Journée Entreprenariat
+                                </span>
+                            </div>
+                        </a>
+                        <a>
+                            <div id="link_contact_drop" class="list_div hover_back ">
+                                <span class=" botton_name name_option_drop">
+                                    Session de Recrutement
+                                </span>
+                            </div>
+                        </a>
+                        <a>
+                            <div id="link_contact_drop" class="list_div hover_back ">
+                                <span class=" botton_name name_option_drop">
+                                    Compétitions
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="dropbutton">
+                    <div class="child_container hover_back">
+                        <div class="botton">
+                            <span id="logo_item" class=" logo_item">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+                                    style="enable-background:new 0 0 512 512;" xml:space="preserve" width="18"
+                                    height="16">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M466.75,242.763V86.25c0-2.346-0.643-4.493-1.6-6.469c0.577-1.599,1.6-3.01,1.6-4.781c0-6.694-4.438-12.583-10.884-14.429    l-210-60c-2.695-0.762-5.537-0.762-8.232,0l-210,60C21.188,62.417,16.75,68.306,16.75,75c0,6.694,4.438,12.583,10.884,14.429    l79.116,22.604v17.752c0,17.065,9.478,32.754,24.141,39.961c67.236,33.047,154.453,33.032,221.719,0.015    c14.663-7.207,24.141-22.896,24.141-39.976v-17.752l60-17.142v147.872c-17.422,6.213-30,22.707-30,42.237v30    c0,8.291,6.709,15,15,15h60c8.291,0,15-6.709,15-15v-30C496.75,265.47,484.172,248.977,466.75,242.763z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M364.322,198.685C326.617,217.215,283.712,227,240.25,227c-43.462,0-86.382-9.8-124.102-28.33    c-3.684-1.811-6.735-4.495-10.009-6.887c3.204,53.99,32.252,99.803,73.304,123.274c0,0,21.057,9.949,27.636,11.818l0.026-0.049    c10.655,3.038,21.625,5.175,33.144,5.175c10.547,0,25.57-2.105,40.582-7.648c6.915-2.462,20.176-9.265,20.176-9.265    c41.077-23.463,70.145-69.29,73.353-123.299C371.077,194.185,368.017,196.87,364.322,198.685z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M240.25,362c-12.092,0-23.729-1.866-35.068-4.603L240.25,410l34.871-52.553C263.841,360.152,252.273,362,240.25,362z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M326.595,335.096c-0.266,0.179-0.564,0.302-0.829,0.48L313.15,354.5c0,0.698-57.513,86.718-57.9,87.299V512h195    c8.291,0,15-6.709,15-15C465.25,415.086,404.961,347.846,326.595,335.096z M360.25,452h-30c-8.291,0-15-6.709-15-15    c0-8.291,6.709-15,15-15h30c8.291,0,15,6.709,15,15C375.25,445.291,368.541,452,360.25,452z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M154.461,335.402c-0.244-0.163-0.516-0.276-0.76-0.441C75.418,347.798,15.25,415.137,15.25,497c0,8.291,6.709,15,15,15    h195v-70.201C157.271,339.655,171.143,360.508,154.461,335.402z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <div class="botton_name">Lauréats
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropbutton">
+                    <div class="child_container hover_back">
+                        <div class="botton">
+                            <span id="logo_item" class="logo_item">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512"
+                                    style="enable-background:new 0 0 512 512;" xml:space="preserve" width="18"
+                                    height="16">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M123.733,130.133c-17.067-17.067-89.6-21.333-113.067-23.467c-2.133,0-4.267,0-6.4,2.133C2.133,110.933,0,115.2,0,117.333    v192C0,315.733,4.267,320,10.667,320h64c4.267,0,8.533-2.133,10.667-6.4c0-6.4,38.4-119.467,42.667-174.933    C128,136.533,128,132.267,123.733,130.133z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M352,181.333c-21.333-6.4-40.533-14.933-57.6-21.333c-38.4-17.067-55.467-8.533-89.6,25.6    c-14.933,14.933-25.6,36.267-23.467,44.8c0,2.133,0,2.133,4.267,4.267c10.667,4.267,25.6,6.4,40.533-17.067    c2.133-2.133,4.267-4.267,8.533-4.267c6.4,0,8.533-2.133,14.933-4.267c4.267-2.133,8.533-4.267,14.933-6.4    c2.133,0,2.133,0,4.267,0c2.133,0,6.4,2.133,8.533,2.133C288,215.467,307.2,230.4,326.4,247.467    c29.867,23.467,59.733,49.067,74.667,68.267h2.133C388.267,273.067,362.667,200.533,352,181.333z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M501.333,128c-83.2,0-130.133,21.333-132.267,21.333c-2.133,2.133-4.267,4.267-6.4,6.4c0,2.133,0,6.4,2.133,8.533    c12.8,21.333,55.467,138.667,61.867,168.533c2.133,4.267,6.4,8.533,10.667,8.533h64c6.4,0,10.667-4.267,10.667-10.667v-192    C512,132.267,507.733,128,501.333,128z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M386.133,337.067c-8.533-19.2-44.8-46.933-76.8-72.533C292.267,249.6,275.2,236.8,262.4,226.133    c-2.133,2.133-6.4,2.133-6.4,4.267c-6.4,2.133-8.533,4.267-17.067,4.267C221.867,256,200.533,264.533,177.067,256    c-10.667-2.133-17.067-10.667-19.2-19.2c-4.267-21.333,14.933-51.2,29.867-66.133h-42.667c-8.533,42.667-23.467,98.133-34.133,128    c8.533,8.533,17.067,19.2,23.467,23.467c40.533,34.133,87.467,68.267,96,74.667c6.4,4.267,19.2,8.533,25.6,8.533    c2.133,0,4.267,0,6.4,0L228.267,371.2c-4.267-4.267-4.267-10.667,0-14.933s10.667-4.267,14.933,0l42.667,42.667    c4.267,4.267,8.533,2.133,12.8,2.133c6.4-2.133,8.533-6.4,10.667-12.8L260.267,339.2c-4.267-4.267-4.267-10.667,0-14.933    s10.667-4.267,14.933,0l53.333,53.333c2.133,2.133,10.667,2.133,17.067,0c2.133-2.133,6.4-4.267,8.533-8.533L294.4,309.333    c-4.267-4.267-4.267-10.667,0-14.933s10.667-4.267,14.933,0l61.867,61.867c4.267,2.133,8.533,0,12.8-2.133    C386.133,352,390.4,345.6,386.133,337.067z"
+                                                    data-original="#000000" class="active-path" data-old_color="#000000"
+                                                    fill="#A1A7B3" />
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <div class="botton_name">Partenaires
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -231,6 +682,10 @@
         </div>
     </div>
 
+    <div class="present-section">
+        
+    </div>
+
     <div class="other-pages">
         <div class="laureat-section">
             <div class="laureat-header">
@@ -246,7 +701,6 @@
             </div>
 
             <div class="laureat-container"></div>
-            </div>
         </div>
     </div>
 
@@ -335,6 +789,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/menu.js"></script>
 </body>
 
 </html>

@@ -78,7 +78,7 @@ iframe{
   display: flex;
   justify-content: space-between;
 }
-path{
+.icons-container path{
   fill: white;
 }
 .icons-container span:hover{
