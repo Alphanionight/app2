@@ -88,25 +88,23 @@ PartenaireComponent.prototype.addPart = function(part){
 }
 
 PartenaireComponent.prototype.printParts = function(){
-    var oldSection = document.getElementById("acceuil-section");
+    var oldSection = document.getElementsByClassName("acceuil-section")[0];
     oldSection.style.display = "none";
 
-    var parent = document.getElementById("others");
-    var section = document.createElement("section");
-    section.setAttribute("class", "part-section");
-    var title = document.createElement("h2");
-    title.setAttribute("class", "div-title");
-
-    var firstWord = document.createElement("div");
-    firstWord.setAttribute("class", "first-word");
-    firstWord.appendChild(document.createTextNode("Nos\xa0"));
-
-    title.appendChild(firstWord);
-    title.appendChild(document.createTextNode("Partenaires"));
-    section.appendChild(title);
+    var parent = document.getElementsByClassName("part-section")[0];
 
     for(let i = 0; i < this.service.size(); i++){
-        section.appendChild(this.addPart(this.service.get(i)));
+        parent.appendChild(this.addPart(this.service.get(i)));
     }
-    parent.appendChild(section);
+}
+
+PartenaireComponent.prototype.printResult = function(arr){
+    if(arr.length != 0 ){
+        var parent = document.getElementsByClassName("part-section")[0];
+        parent.innerHTML = "";
+
+        for(let i = 0; i < arr.length; i++){
+            parent.appendChild(this.addPart(arr[i]));
+        }
+    }
 }

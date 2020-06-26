@@ -36,17 +36,20 @@ function openFormation(){
 
 var memo = [];
 function openSubMenu(element){
-    var next = element.parentElement.nextElementSibling;
-    console.log(element.parentElement.nextElementSibling);
+    var next = element.nextElementSibling;
+    var svg = element.lastElementChild;
+    console.log(svg);
     
     if(!contains(memo, element)){
         if(next.classList.contains("semestre-content")){
             next.style.display = "flex";
         }
         else next.style.display = "block";
+        svg.classList.toggle("rotate");
         memo.push(element);
     } else {
         next.style.display = "none";
+        svg.classList.remove("rotate");
         removeElement(memo, element);
     }
 }

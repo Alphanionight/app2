@@ -1,12 +1,15 @@
 var view;
 
 function Part_main(){
-    var others = document.getElementById("other-pages");
-    others.innerHTML = "";
+    var others = document.getElementsByClassName("other-pages")[0];
+    hideChilds(others);
+    var part_section = document.getElementsByClassName("part-section")[0];
+    part_section.style.display = "block";
     var service = new PartenaireService();
     service.load(partenaires);
     view = new PartenaireComponent(service);
     view.printParts();
+    window.scrollTo(0, 0); 
 }
 
 function Laur_main(){
@@ -22,12 +25,15 @@ function Laur_main(){
 }
 
 function Activ_main(){
-    var others = document.getElementById("other-pages");
-    others.innerHTML = "";
+    var others = document.getElementsByClassName("other-pages")[0];
+    hideChilds(others);
+    var activ_section = document.getElementsByClassName("activ-section")[0];
+    activ_section.style.display = "block";
     var service = new ActivityService();
     service.load(activities);
     view = new ActivityComponent(service);
     view.printActivs();
+    window.scrollTo(0, 0); 
 }
 
 function Event_main(){
@@ -47,10 +53,8 @@ function hideChilds(parent){
     }
 }
 
-function searsh(){
+function searshLaureat(){
     var text = document.getElementsByClassName("searchTerm")[0].value;
-    console.log(text);
-    
     var result = [];
     for (let i = 0; i < laureats.length; i++) {
         const element = laureats[i];
@@ -67,17 +71,43 @@ function searsh(){
         }
     }
     view.printResult(result);
-    console.log(result.length + "idk");
+}
+
+function searshPartenaire(){
+    var text = document.getElementsByClassName("searchTerm")[1].value;
+    var result = [];
+    for (let i = 0; i < partenaires.length; i++) {
+        const element = partenaires[i];
+        if(element.name.toUpperCase().includes(text.toUpperCase())){
+            result.push(element);
+        }
+    }
+    view.printResult(result);
+}
+
+function searshActivity(){
+    var text = document.getElementsByClassName("searchTerm")[2].value;
+    var result = [];
+    for (let i = 0; i < activities.length; i++) {
+        const element = activities[i];
+        if(element.label.toUpperCase().includes(text.toUpperCase()) 
+        || element.date.toUpperCase().includes(text.toUpperCase()) ){
+            result.push(element);
+        }
+    }
+    view.printResult(result);
 }
 
 function listen(){
-    var input = document.getElementsByClassName("searchTerm")[0];
-    input.addEventListener("keyup", function(event) {
-        if (event.keyCode === 13) {
-            event.preventDefault();
-            document.getElementsByClassName("searchButton")[0].click();
-        }
-    });
+    for (let i = 0; i < 3; i++) {
+        const input = document.getElementsByClassName("searchTerm")[i];
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementsByClassName("searchButton")[i].click();
+            }
+        });
+    }
 }
 
 function openPresentation(){
