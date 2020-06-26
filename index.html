@@ -46,8 +46,7 @@
                 </div>
             </div>
             <div id="container_sub">
-
-                <div id="parent_sub" onclick="toggleSubMenu()" class="slid_menu_list hover_back ">
+                <div id="parent_sub" onclick="toggleSubMenu(this)" class="slid_menu_list hover_back ">
                     <span class="drop_menu_ico">
                         <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" enable-background="new 0 0 511.995 511.995"
                             height="16" viewBox="0 0 511.995 511.995" width="18">
@@ -61,7 +60,7 @@
                         Acceuil
                     </a>
 
-                    <b id="rot" class="button_for_cat_slid" style="margin-bottom: -7px; transform: rotate(0deg);">
+                    <b class="button_for_cat_slid" style="margin-bottom: -7px; transform: rotate(0deg);">
                     </b>
                 </div>
                 <div id="sub_menu">
@@ -141,9 +140,9 @@
                     </span>
                 </div>
             </a>
-            <a>
-                <div id="link_contact_drop" class="list_div hover_back ">
-                    <span class=" drop_menu_ico">
+            <div id="container_sub">
+                <div id="parent_sub" onclick="toggleSubMenu(this)" class="slid_menu_list hover_back ">
+                    <span class="drop_menu_ico">
                         <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1_1_" enable-background="new 0 0 64 64"
                             height="16" viewBox="0 0 64 64" width="18">
                             <g>
@@ -162,11 +161,44 @@
                             </g>
                         </svg>
                     </span>
-                    <span class=" botton_name name_option_drop">
+                    <a class=" botton_name name_option_drop">
                         Événements
-                    </span>
+                    </a>
+
+                    <b class="button_for_cat_slid" style="margin-bottom: -7px; transform: rotate(0deg);">
+                    </b>
                 </div>
-            </a>
+                <div id="sub_menu">
+                    <a onclick="openAbout()">
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                C. remise des diplôme
+                            </span>
+                        </div>
+                    </a>
+                    <a onclick="openGoal()">
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                Journée Entreprenariat
+                            </span>
+                        </div>
+                    </a>
+                    <a onclick="openAccepted()">
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                Sessions de Recrutement
+                            </span>
+                        </div>
+                    </a>
+                    <a onclick="openFormation()">
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                Compétitions
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <a onclick="Laur_main()">
                 <div class="list_div hover_back">
                     <span class=" drop_menu_ico">
