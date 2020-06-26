@@ -1,5 +1,6 @@
 .part-section {
-    margin-top: 100px;
+    margin-top: 64px;
+    display: none;
 }
 
 .part-list {

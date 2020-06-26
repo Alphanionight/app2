@@ -213,8 +213,9 @@ a:hover
 .logo_item svg path{
     fill:#a1a7b3;
 }
-.botton_name
-{display: block;
+.botton_name {
+    text-decoration: none;
+    display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;}

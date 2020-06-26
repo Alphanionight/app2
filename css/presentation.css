@@ -7,8 +7,7 @@
   }
 
   .present-container{
-      font-family: Segoe UI,Helvetica Neue,Helvetica,Lucida Grande,Arial,Ubuntu,Cantarell,Fira Sans,sans-serif;
-      width: 100%;
+      font-family: "Merriweather", "Times New Roman", Times, serif;
       max-width: 1200px;
       padding: 10px 20px;
       margin: auto;
@@ -16,7 +15,7 @@
   .present-title{
     width: fit-content;
     font-size: 36px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.38;
     font-family: inherit;
     color: #35456c;
@@ -65,7 +64,8 @@
   .sub-content{
     display: flex;
     align-items: center;
-    
+    cursor: pointer;
+    width: fit-content;
   }
   .sub-content h1{
     margin-right: 20px;
@@ -75,12 +75,18 @@
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    cursor: pointer;
   }
-  .sub-content img{
+  .sub-content svg{
+    transform: rotate(0deg);
+    transition: 500ms;
     width: 24px;
     height: 24px;
   }
+
+  .rotate {
+    transform: rotate(90deg) !important;
+  }
+
   .semestre-content{
     display: flex;
     justify-content: space-between;

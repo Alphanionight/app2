@@ -62,32 +62,23 @@ ActivityComponent.prototype.addActiv = function(activity){
 }
 
 ActivityComponent.prototype.printActivs = function(){
-    var oldSection = document.getElementById("acceuil-section");
+    var oldSection = document.getElementsByClassName("acceuil-section")[0];
     oldSection.style.display = "none";
 
-    var parent = document.getElementById("others");
-
-    var activ_section = document.createElement("section");
-    activ_section.setAttribute("class", "activ-section");
-
-    var row = document.createElement("div");
-    row.setAttribute("class", "row");
-
-    var div_title = document.createElement("h2");
-    div_title.setAttribute("class", "div-title");
-
-    var first_word = document.createElement("div");
-    first_word.setAttribute("class", "first-word");
-
-    first_word.appendChild(document.createTextNode("Les\xa0"));
-    div_title.appendChild(first_word);
-    div_title.appendChild(document.createTextNode("Activités"));
-
-    activ_section.appendChild(div_title);
+    var parent = document.getElementsByClassName("row")[0];
 
     for(let i = 0; i < this.service.size(); i++){
-        row.appendChild(this.addActiv(this.service.get(i)));
+        parent.appendChild(this.addActiv(this.service.get(i)));
     }
-    activ_section.appendChild(row);
-    parent.appendChild(activ_section);
+}
+
+ActivityComponent.prototype.printResult = function(arr){
+    if(arr.length != 0 ){
+        var parent = document.getElementsByClassName("row")[0];
+        parent.innerHTML = "";
+
+        for(let i = 0; i < arr.length; i++){
+            parent.appendChild(this.addActiv(arr[i]));
+        }
+    }
 }
