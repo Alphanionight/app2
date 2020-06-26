@@ -9,29 +9,21 @@ function toggleMenu(){
 	menu.classList.toggle("container_popup_menu--open");
 }
 
-var parent_sub = document.querySelector("#parent_sub");
-var button_name = document.querySelector(".botton_name");
-var drop_menu_ico = document.querySelector(".drop_menu_ico");
-var button_name = document.querySelector(".botton_name");
-var layer = document.querySelector("#Layer_1");
-var ddp = document.querySelector("#ddp");
-var rot = document.querySelector("#rot");
-
 window.addEventListener("mouseup", function(event){
-	if(event.target != parent_sub && event.target != button_name && event.target != rot && 
-		event.target != layer && event.target != ddp && event.target != drop_menu_ico){
+	if(event.target.id != "parent_sub" && !event.target.classList.contains("botton_name") && 
+		!event.target.classList.contains("button_for_cat_slid") && event.target.id != "Layer_1" && 
+		event.target.id != "ddp" && !event.target.classList.contains("drop_menu_ico")){
 		menu.classList.remove("container_popup_menu--open");
 		popup.style["transition-delay"] = "500ms";
 		popup.style.left = "-100%";
     }
 });
 
-var parent = document.getElementById('parent_sub');
-var subMenu = document.getElementById('sub_menu');
-var b = document.getElementById('rot');
 var isOpened = false;
 
-function toggleSubMenu(){
+function toggleSubMenu(element){
+	var subMenu = element.nextElementSibling;
+	var b = element.lastElementChild;
 	if(isOpened == false){
 		b.style.transform = "rotate(180deg)";
 		subMenu.style.display = "block";
