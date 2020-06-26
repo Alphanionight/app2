@@ -1,4 +1,5 @@
 function openAbout(){
+    openPresentation();
     hideElements();
     var about = document.getElementById("about");
     about.style.display = "block" ;
@@ -7,6 +8,7 @@ function openAbout(){
 }
 
 function openGoal(){
+    openPresentation();
     hideElements();
     var about = document.getElementById("goal");
     about.style.display = "block" ;
@@ -15,6 +17,7 @@ function openGoal(){
 }
 
 function openAccepted(){
+    openPresentation();
     hideElements();
     var about = document.getElementById("accepted");
     about.style.display = "block" ;
@@ -23,6 +26,7 @@ function openAccepted(){
 }
 
 function openFormation(){
+    openPresentation();
     hideElements();
     var about = document.getElementById("formation");
     about.style.display = "block" ;

@@ -57,31 +57,39 @@
                             </g>
                         </svg>
                     </span>
-                    <span class=" botton_name name_option_drop">
+                    <a href="index.html" class=" botton_name name_option_drop">
                         Acceuil
-                    </span>
+                    </a>
 
                     <b id="rot" class="button_for_cat_slid" style="margin-bottom: -7px; transform: rotate(0deg);">
                     </b>
                 </div>
                 <div id="sub_menu">
-                    <a>
+                    <a onclick="openAbout()">
                         <div class="items_sub hover_back ">
                             <span class=" botton_name name_option_drop">
-                                Contact
-                            </span>
-                        </div>
-                    </a><a>
-                        <div class="items_sub hover_back ">
-                            <span class=" botton_name name_option_drop">
-                                Contact
+                                À propos
                             </span>
                         </div>
                     </a>
-                    <a>
+                    <a onclick="openGoal()">
                         <div class="items_sub hover_back ">
                             <span class=" botton_name name_option_drop">
-                                Contact
+                                Objectif
+                            </span>
+                        </div>
+                    </a>
+                    <a onclick="openAccepted()">
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                Profils selectionés
+                            </span>
+                        </div>
+                    </a>
+                    <a onclick="openFormation()">
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                Formation
                             </span>
                         </div>
                     </a>
@@ -313,28 +321,28 @@
                     <div class="drop_menu" id="first_drop">
                         <div class="triangle">
                         </div>
-                        <a>
+                        <a onclick="openAbout()">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
                                     À propos
                                 </span>
                             </div>
                         </a>
-                        <a>
+                        <a onclick="openGoal()">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
                                     Objectif
                                 </span>
                             </div>
                         </a>
-                        <a>
+                        <a onclick="openAccepted()">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
                                     Profils Sélectionnés
                                 </span>
                             </div>
                         </a>
-                        <a>
+                        <a onclick="openFormation()">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
                                     Contenu de la formation
@@ -697,7 +705,7 @@
     <div class="other-pages">
         <div class="present-section">
             <div class="present-container">
-                <h2 class="present-title">Présentation</h2>
+                <h2 class="present-title">Présentation :</h2>
                 <div class="present-nav">
                     <div id="aboutMenu" class="present-nav-element isactive-nav-element" onclick="openAbout()">À propos
                     </div>
@@ -761,7 +769,10 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Traitement de dossier</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <title>ionicons-v5-a</title>
+                                <polyline points="184 112 328 256 184 400" style="fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></polyline>
+                            </svg>
                         </div>
                         <div class="present-parag-container hidden">
                             <p class="present-parag">
@@ -780,7 +791,10 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Entretien Ecrit</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <title>ionicons-v5-a</title>
+                                <polyline points="184 112 328 256 184 400" style="fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></polyline>
+                            </svg>
                         </div>
                         <div class="present-parag-container hidden">
                             <p class="present-parag">
@@ -794,7 +808,10 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Entretien Oral</h1>
-                            <img src="images/chevron-down-outline.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <title>ionicons-v5-a</title>
+                                <polyline points="184 112 328 256 184 400" style="fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></polyline>
+                            </svg>
                         </div>
                         <div class="present-parag-container hidden">
                             <p class="present-parag">
@@ -827,7 +844,11 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Semestre 1</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 512 512'>
+                                <title>ionicons-v5-a</title>
+                                <polyline points='184 112 328 256 184 400'
+                                    style='fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                            </svg>
                         </div>
                         <div class="semestre-content hidden">
                             <div class="module-content">
@@ -892,7 +913,11 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Semestre 2</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 512 512'>
+                                <title>ionicons-v5-a</title>
+                                <polyline points='184 112 328 256 184 400'
+                                    style='fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                            </svg>
                         </div>
                         <div class="semestre-content hidden">
                             <div class="module-content">
@@ -957,7 +982,11 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Semestre 3</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 512 512'>
+                                <title>ionicons-v5-a</title>
+                                <polyline points='184 112 328 256 184 400'
+                                    style='fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                            </svg>
                         </div>
                         <div class="semestre-content hidden">
                             <div class="module-content">
@@ -1022,7 +1051,11 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Semestre 4</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 512 512'>
+                                <title>ionicons-v5-a</title>
+                                <polyline points='184 112 328 256 184 400'
+                                    style='fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                            </svg>
                         </div>
                         <div class="semestre-content hidden">
                             <p class="present-parag">
@@ -1046,7 +1079,7 @@
 
         <div class="laureat-section">
             <div class="laureat-header">
-                <h2 class="laureat-title">Laureat</h2>
+                <h2 class="laureat-title">Lauréats</h2>
                 <div class="wrap">
                     <div class="search">
                         <input type="text" class="searchTerm" placeholder="Que cherchez-vous?">

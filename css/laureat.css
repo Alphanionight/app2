@@ -19,10 +19,11 @@ body{
   -webkit-font-smoothing: subpixel-antialiased;
   margin-bottom: 0.5rem;
   font-family: "Merriweather", "Times New Roman", Times, serif;
+  font-size: 30px;
 }
 .laureat-title::after{
   content: " ";
-  border-bottom: 3px #d93139  solid;
+  border-bottom: 4px #d93139  solid;
   width: 100%;
   margin: auto;
   display: block;
