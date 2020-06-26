@@ -79,3 +79,13 @@ function listen(){
         }
     });
 }
+
+function openPresentation(){
+    var oldSection = document.getElementsByClassName("acceuil-section")[0];
+    oldSection.style.display = "none";
+    var others = document.getElementsByClassName("other-pages")[0];
+    hideChilds(others);
+    var present_section = document.getElementsByClassName("present-section")[0];
+    present_section.style.display = "block";
+    window.scrollTo(0, 0); 
+}

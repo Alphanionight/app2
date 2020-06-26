@@ -20,15 +20,10 @@ var rot = document.querySelector("#rot");
 window.addEventListener("mouseup", function(event){
 	if(event.target != parent_sub && event.target != button_name && event.target != rot && 
 		event.target != layer && event.target != ddp && event.target != drop_menu_ico){
-		console.log("fu");
-		
 		menu.classList.remove("container_popup_menu--open");
 		popup.style["transition-delay"] = "500ms";
 		popup.style.left = "-100%";
-    } else {
-		console.log("fufu");
-		
-	}
+    }
 });
 
 var parent = document.getElementById('parent_sub');

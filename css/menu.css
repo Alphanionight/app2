@@ -230,12 +230,13 @@ a:hover
 }
 .botton
 {
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     align-items: center;
     max-width: 100%;	
 	    color: #505763;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 20px;
     padding: 12px 15px;
     white-space: nowrap;
