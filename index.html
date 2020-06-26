@@ -57,31 +57,39 @@
                             </g>
                         </svg>
                     </span>
-                    <span class=" botton_name name_option_drop">
+                    <a href="index.html" class=" botton_name name_option_drop">
                         Acceuil
-                    </span>
+                    </a>
 
                     <b id="rot" class="button_for_cat_slid" style="margin-bottom: -7px; transform: rotate(0deg);">
                     </b>
                 </div>
                 <div id="sub_menu">
-                    <a>
+                    <a onclick="openAbout()">
                         <div class="items_sub hover_back ">
                             <span class=" botton_name name_option_drop">
-                                Contact
-                            </span>
-                        </div>
-                    </a><a>
-                        <div class="items_sub hover_back ">
-                            <span class=" botton_name name_option_drop">
-                                Contact
+                                À propos
                             </span>
                         </div>
                     </a>
-                    <a>
+                    <a onclick="openGoal()">
                         <div class="items_sub hover_back ">
                             <span class=" botton_name name_option_drop">
-                                Contact
+                                Objectif
+                            </span>
+                        </div>
+                    </a>
+                    <a onclick="openAccepted()">
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                Profils selectionés
+                            </span>
+                        </div>
+                    </a>
+                    <a onclick="openFormation()">
+                        <div class="items_sub hover_back ">
+                            <span class=" botton_name name_option_drop">
+                                Formation
                             </span>
                         </div>
                     </a>
@@ -313,31 +321,31 @@
                     <div class="drop_menu" id="first_drop">
                         <div class="triangle">
                         </div>
-                        <a>
+                        <a onclick="openAbout()">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
-                                    Historique
+                                    À propos
                                 </span>
                             </div>
                         </a>
-                        <a>
+                        <a onclick="openGoal()">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
-                                    Présentation
+                                    Objectif
                                 </span>
                             </div>
                         </a>
-                        <a>
+                        <a onclick="openAccepted()">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
-                                    Contenu de la Formation
+                                    Profils selectionés
                                 </span>
                             </div>
                         </a>
-                        <a>
+                        <a onclick="openFormation()">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
-                                    Conditions d'accès
+                                    Formation
                                 </span>
                             </div>
                         </a>
@@ -681,11 +689,13 @@
     <div class="other-pages">
         <div class="present-section">
             <div class="present-container">
-                <h2 class="present-title">Présentation</h2>
+                <h2 class="present-title">Présentation :</h2>
                 <div class="present-nav">
-                    <div id="aboutMenu" class="present-nav-element isactive-nav-element" onclick="openAbout()">À propos</div>
+                    <div id="aboutMenu" class="present-nav-element isactive-nav-element" onclick="openAbout()">À propos
+                    </div>
                     <div id="goalMenu" class="present-nav-element" onclick="openGoal()">Objectif</div>
-                    <div id="acceptedMenu" class="present-nav-element" onclick="openAccepted()">Profils selectionés</div>
+                    <div id="acceptedMenu" class="present-nav-element" onclick="openAccepted()">Profils selectionés
+                    </div>
                     <div id="formationMenu" class="present-nav-element" onclick="openFormation()">Formation</div>
                 </div>
                 <div id="about" class="present-element-content">
@@ -761,7 +771,10 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">L'excellence académique</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <title>ionicons-v5-a</title>
+                                <polyline points="184 112 328 256 184 400" style="fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></polyline>
+                            </svg>
                         </div>
                         <div class="present-parag-container hidden">
                             <p class="present-parag">
@@ -782,7 +795,10 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">L'expérience professionnelle</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <title>ionicons-v5-a</title>
+                                <polyline points="184 112 328 256 184 400" style="fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></polyline>
+                            </svg>
                         </div>
                         <div class="present-parag-container hidden">
                             <p class="present-parag">
@@ -804,7 +820,10 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Le parcours du candidat</h1>
-                            <img src="images/chevron-down-outline.svg" alt="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512">
+                                <title>ionicons-v5-a</title>
+                                <polyline points="184 112 328 256 184 400" style="fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"></polyline>
+                            </svg>
                         </div>
                         <div class="present-parag-container hidden">
                             <p class="present-parag">
@@ -827,18 +846,23 @@
                 <div id="formation" class="present-element-content hidden">
                     <h1>Image de la formation</h1>
                     <div class="present-parag-container">
-                       
+
                         <img class="formation-image" src="images/Formation.jpeg" alt="">
                     </div>
                     <h1 id="programme-title">Programme</h1>
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Semestre 1</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 512 512'>
+                                <title>ionicons-v5-a</title>
+                                <polyline points='184 112 328 256 184 400'
+                                    style='fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                            </svg>
                         </div>
                         <div class="semestre-content hidden">
                             <div class="module-content">
-                                <img class="module-image" src="images/The-Top-10-Javascript-Frameworks-730x410-2.jpg" alt="">
+                                <img class="module-image" src="images/The-Top-10-Javascript-Frameworks-730x410-2.jpg"
+                                    alt="">
                                 <div class="module-data">
                                     <h4 class="module-title"> Java EE</h4>
                                     <p class="module-descreption">
@@ -847,7 +871,9 @@
                                 </div>
                             </div>
                             <div class="module-content">
-                                <img class="module-image" src="images/EDU-CourseReport-30BestOnlineCoursesforXML-15-XMLCrashCourseUdemy-1280x707.jpg" alt="">
+                                <img class="module-image"
+                                    src="images/EDU-CourseReport-30BestOnlineCoursesforXML-15-XMLCrashCourseUdemy-1280x707.jpg"
+                                    alt="">
                                 <div class="module-data">
                                     <h4 class="module-title"> Java EE</h4>
                                     <p class="module-descreption">
@@ -896,11 +922,16 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Semestre 2</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 512 512'>
+                                <title>ionicons-v5-a</title>
+                                <polyline points='184 112 328 256 184 400'
+                                    style='fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                            </svg>
                         </div>
                         <div class="semestre-content hidden">
                             <div class="module-content">
-                                <img class="module-image" src="images/The-Top-10-Javascript-Frameworks-730x410-2.jpg" alt="">
+                                <img class="module-image" src="images/The-Top-10-Javascript-Frameworks-730x410-2.jpg"
+                                    alt="">
                                 <div class="module-data">
                                     <h4 class="module-title"> Java EE</h4>
                                     <p class="module-descreption">
@@ -909,7 +940,9 @@
                                 </div>
                             </div>
                             <div class="module-content">
-                                <img class="module-image" src="images/EDU-CourseReport-30BestOnlineCoursesforXML-15-XMLCrashCourseUdemy-1280x707.jpg" alt="">
+                                <img class="module-image"
+                                    src="images/EDU-CourseReport-30BestOnlineCoursesforXML-15-XMLCrashCourseUdemy-1280x707.jpg"
+                                    alt="">
                                 <div class="module-data">
                                     <h4 class="module-title"> Java EE</h4>
                                     <p class="module-descreption">
@@ -958,11 +991,16 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Semestre 3</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 512 512'>
+                                <title>ionicons-v5-a</title>
+                                <polyline points='184 112 328 256 184 400'
+                                    style='fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                            </svg>
                         </div>
                         <div class="semestre-content hidden">
                             <div class="module-content">
-                                <img class="module-image" src="images/The-Top-10-Javascript-Frameworks-730x410-2.jpg" alt="">
+                                <img class="module-image" src="images/The-Top-10-Javascript-Frameworks-730x410-2.jpg"
+                                    alt="">
                                 <div class="module-data">
                                     <h4 class="module-title"> Java EE</h4>
                                     <p class="module-descreption">
@@ -971,7 +1009,9 @@
                                 </div>
                             </div>
                             <div class="module-content">
-                                <img class="module-image" src="images/EDU-CourseReport-30BestOnlineCoursesforXML-15-XMLCrashCourseUdemy-1280x707.jpg" alt="">
+                                <img class="module-image"
+                                    src="images/EDU-CourseReport-30BestOnlineCoursesforXML-15-XMLCrashCourseUdemy-1280x707.jpg"
+                                    alt="">
                                 <div class="module-data">
                                     <h4 class="module-title"> Java EE</h4>
                                     <p class="module-descreption">
@@ -1020,15 +1060,26 @@
                     <div>
                         <div class="sub-content">
                             <h1 onclick="openSubMenu(this)">Semestre 4</h1>
-                            <img src="images/chevron-forward-outline.svg" alt="">
+                            <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 512 512'>
+                                <title>ionicons-v5-a</title>
+                                <polyline points='184 112 328 256 184 400'
+                                    style='fill:none;stroke:#E6142D;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+                            </svg>
                         </div>
                         <div class="semestre-content hidden">
                             <p class="present-parag">
-                                Le parcours académique antérieur est évalué avec attention et les résultats obtenus sont des éléments essentiels lors de la sélection de nos futurs étudiants. Le candidat doit se situer parmi les meilleurs étudiants de sa promotion.
+                                Le parcours académique antérieur est évalué avec attention et les résultats obtenus sont
+                                des éléments essentiels lors de la sélection de nos futurs étudiants. Le candidat doit
+                                se situer parmi les meilleurs étudiants de sa promotion.
                             </p>
-                            <p class="present-parag">  Vous devrez indiquer la moyenne cumulée de l'ensemble de vos études supérieures antérieures. 
+                            <p class="present-parag"> Vous devrez indiquer la moyenne cumulée de l'ensemble de vos
+                                études supérieures antérieures.
                             </p>
-                                <p class="present-parag">Veuillez noter qu'aucune moyenne académique ne garantit une admission, c’est en effet l’ensemble des éléments présentés par le candidat qui est évalué. À l’inverse, une moyenne académique excellente qui ne serait pas appuyée par d’autres éléments enrichissant le profil pourrait constituer une candidature moins solide. </p>
+                            <p class="present-parag">Veuillez noter qu'aucune moyenne académique ne garantit une
+                                admission, c’est en effet l’ensemble des éléments présentés par le candidat qui est
+                                évalué. À l’inverse, une moyenne académique excellente qui ne serait pas appuyée par
+                                d’autres éléments enrichissant le profil pourrait constituer une candidature moins
+                                solide. </p>
                         </div>
                     </div>
                 </div>
@@ -1037,7 +1088,7 @@
 
         <div class="laureat-section">
             <div class="laureat-header">
-                <h2 class="laureat-title">Laureat</h2>
+                <h2 class="laureat-title">Lauréats</h2>
                 <div class="wrap">
                     <div class="search">
                         <input type="text" class="searchTerm" placeholder="Que cherchez-vous?">

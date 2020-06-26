@@ -30,6 +30,7 @@ var parent = document.getElementById('parent_sub');
 var subMenu = document.getElementById('sub_menu');
 var b = document.getElementById('rot');
 var isOpened = false;
+
 function toggleSubMenu(){
 	if(isOpened == false){
 		b.style.transform = "rotate(180deg)";
