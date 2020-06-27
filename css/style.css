@@ -267,6 +267,7 @@ body,html {
 }
 
 .element > img {
+    min-width: 210px;
     width: 70%;
 }
 
@@ -275,6 +276,7 @@ body,html {
 }
 
 .nom {
+    min-width: 210px;
     width: 70%;
     font-size: 20px;
     color: black;

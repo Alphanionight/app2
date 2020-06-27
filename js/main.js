@@ -47,6 +47,7 @@ function Event_main(id){
     hideChilds(ec);
     var e = document.getElementById(id);
     e.style.display = "block";
+    window.scrollTo(0, 0); 
 }
 
 function hideChilds(parent){

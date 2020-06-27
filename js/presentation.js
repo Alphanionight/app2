@@ -5,6 +5,7 @@ function openAbout(){
     about.style.display = "block" ;
     var aboutMenu = document.getElementById("aboutMenu");
     aboutMenu.classList.toggle("isactive-nav-element");
+    window.scrollTo(0, 0); 
 }
 
 function openGoal(){
@@ -14,6 +15,7 @@ function openGoal(){
     about.style.display = "block" ;
     var aboutMenu = document.getElementById("goalMenu");
     aboutMenu.classList.toggle("isactive-nav-element");
+    window.scrollTo(0, 0); 
 }
 
 function openAccepted(){
@@ -23,6 +25,7 @@ function openAccepted(){
     about.style.display = "block" ;
     var aboutMenu = document.getElementById("acceptedMenu");
     aboutMenu.classList.toggle("isactive-nav-element");
+    window.scrollTo(0, 0); 
 }
 
 function openFormation(){
@@ -32,6 +35,7 @@ function openFormation(){
     about.style.display = "block" ;
     var aboutMenu = document.getElementById("formationMenu");
     aboutMenu.classList.toggle("isactive-nav-element");
+    window.scrollTo(0, 0); 
 }
 
 var memo = [];
