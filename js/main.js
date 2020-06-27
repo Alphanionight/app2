@@ -36,13 +36,17 @@ function Activ_main(){
     window.scrollTo(0, 0); 
 }
 
-function Event_main(){
-    var others = document.getElementById("other-pages");
-    others.innerHTML = "";
-    var service = new EventService();
-    service.load(events);
-    view = new EventComponent(service);
-    view.printEvent();
+function Event_main(id){
+    var oldSection = document.getElementsByClassName("acceuil-section")[0];
+    oldSection.style.display = "none";
+    var others = document.getElementsByClassName("other-pages")[0];
+    hideChilds(others);
+    var event = document.getElementsByClassName("event-section")[0];
+    event.style.display = "block";
+    var ec = document.getElementById("event-c");
+    hideChilds(ec);
+    var e = document.getElementById(id);
+    e.style.display = "block";
 }
 
 function hideChilds(parent){

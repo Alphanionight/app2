@@ -9,5 +9,5 @@ function Laureat(nom, prenom, email, promotion, ent_stage, ent_contrat, ent_actu
     this.poste_actuelle = poste_actuelle;
     this.localisation = localisation;
     this.photo = photo;
-    this.linkedIn = linkedIn
+    this.linkedIn = linkedIn;
 }

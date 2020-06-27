@@ -313,6 +313,10 @@ body,html {
     color: white;
 }
 
+.norm-cursor{
+    cursor: context-menu !important;
+}
+
 @media only screen and (max-width: 1200px){
     .def-text {
         font-size: 12px;

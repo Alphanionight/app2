@@ -21,7 +21,7 @@ var laureats = [
     ),
     new Laureat(
         "HAIDAR", "Hicham ", "hichamhaidar96@gmail.com", "2018-2020", "CGI, Fès",
-         "aucune", "CGI, Fès", "Stagiaire", "Fés", "images/Laureats/Hicham Haidar.jpg", ""
+         "aucune", "CGI, Fès", "Stagiaire", "Fés", "images/Laureats/Hicham Haidar.jpg", "https://www.linkedin.com/in/hicham-haidar-050b1212b/"
     ),
     new Laureat(
         "FILALI SADIQ", "Safae ", "safae.filali.sadiq@gmail.com", "2016-2018", "Capgemini",
