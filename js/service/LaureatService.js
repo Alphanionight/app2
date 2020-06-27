@@ -27,7 +27,8 @@ LaureatService.prototype.load = function(laureats){
                 laureats[i].ent_actuelle,
                 laureats[i].poste_actuelle,
                 laureats[i].localisation,
-                laureats[i].photo
+                laureats[i].photo,
+                laureats[i].linkedIn
             )
         );
     }
