@@ -43,6 +43,7 @@
     padding: 20px;
     border-right: 1px solid lightgray;
     width: 60%;
+	height: 100%;
 }
 
 .part-text > ul{
