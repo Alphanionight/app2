@@ -13,5 +13,8 @@ var activities = [
     ),
     new Activity(
         "images/activities/travail-equipe.jpg", "Travail en équipe", "Le travail d’équipe à un impact positif sur l’efficacité et la productivité. Lorsqu’un projet est géré en équipe, les rôles sont attribués en fonction des forces et des faiblesses de chacun. Cela permet à chaque membre du groupe d'exploiter ses compétences au maximum et d'obtenir de meilleurs résultats.", "27 JUIN 2020"
+    ),
+    new Activity(
+        "images/activities/tp.jpg", "Travaux pratiques", "Fondé sur l'apprentissage pratique avec en particulier la réalisation d'expériences permettant de vérifier et compléter les connaissances dispensées dans les cours théoriques.", "27 JUIN 2020"
     )
 ];
