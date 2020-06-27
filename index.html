@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/partenaires.css">
     <link rel="stylesheet" href="css/laureat.css">
     <link rel="stylesheet" href="css/activity.css">
-    <link rel="stylesheet" href="css/event.css">
+    <link rel="stylesheet" href="css/evnt.css">
     <link rel="stylesheet" href="css/presentation.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/model/partenaire.js"></script>
@@ -169,28 +169,28 @@
                     </b>
                 </div>
                 <div id="sub_menu">
-                    <a onclick="openAbout()">
+                    <a onclick="Event_main('evnt1')">
                         <div class="items_sub hover_back ">
                             <span class=" botton_name name_option_drop">
                                 C. remise des diplôme
                             </span>
                         </div>
                     </a>
-                    <a onclick="openGoal()">
+                    <a onclick="Event_main('evnt2')">
                         <div class="items_sub hover_back ">
                             <span class=" botton_name name_option_drop">
                                 Journée Entreprenariat
                             </span>
                         </div>
                     </a>
-                    <a onclick="openAccepted()">
+                    <a onclick="Event_main('evnt3')">
                         <div class="items_sub hover_back ">
                             <span class=" botton_name name_option_drop">
                                 Sessions de Recrutement
                             </span>
                         </div>
                     </a>
-                    <a onclick="openFormation()">
+                    <a onclick="Event_main('evnt4')">
                         <div class="items_sub hover_back ">
                             <span class=" botton_name name_option_drop">
                                 Compétitions
@@ -428,7 +428,7 @@
                     </div>
                 </div>
                 <div class="dropbutton for_display_drop">
-                    <div class="child_container hover_back ">
+                    <div class="child_container hover_back norm-cursor">
                         <div class="botton">
                             <span id="logo_item" class="logo_item">
                                 <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1_1_"
@@ -455,28 +455,28 @@
                     <div class="drop_menu" id="first_drop">
                         <div class="triangle">
                         </div>
-                        <a>
+                        <a onclick="Event_main('evnt1')">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
                                     C. de remise des diplômes
                                 </span>
                             </div>
                         </a>
-                        <a>
+                        <a onclick="Event_main('evnt2')">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
                                     Journée Entreprenariat
                                 </span>
                             </div>
                         </a>
-                        <a>
+                        <a onclick="Event_main('evnt3')">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
                                     Sessions de Recrutement
                                 </span>
                             </div>
                         </a>
-                        <a>
+                        <a onclick="Event_main('evnt4')">
                             <div id="link_contact_drop" class="list_div hover_back ">
                                 <span class=" botton_name name_option_drop">
                                     Compétitions
@@ -1159,6 +1159,326 @@
             </div>
             <div class="row">
 
+            </div>
+        </div>
+
+        <div class="event-section">
+            <div class="laureat-header">
+                <h2 class="laureat-title">Événements</h2>
+            </div>
+
+            <div id="event-c">
+                <div id="evnt1" class="ceremonies-container">
+                    <h2 class="ceremonie-date">MAI, 2016</h2>
+                    <div class="ceremonie-container">
+                        <div class="ceremonie-head">
+                            <div class="ceremonie-planning">
+                                <div class="ceremonie-day">SAM</div>
+                                <div class="ceremonie-day-mounth">16</div>
+                                <div class="ceremonie-mounth">Maï</div>
+                            </div>
+                            <div class="ceremonie-data">
+                                <div class="cermonie-title">Cérémonie de Remise des Diplômes Master MQL</div>
+                                <div class="ceremonie-duration opacity7 cer-small-font">
+                                    <svg id="Capa_1" enable-background="new 0 0 443.294 443.294" height="14px"
+                                        viewBox="0 0 443.294 443.294" width="14px" xmlns="http://www.w3.org/2000/svg">
+                                        <path style="fill:#8c8c8c;opacity:0.7"
+                                            d="m221.647 0c-122.214 0-221.647 99.433-221.647 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647-99.433-221.647-221.647-221.647zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z" />
+                                        <path style="fill:#8c8c8c;opacity:0.7"
+                                            d="m235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z" />
+                                        </svg>
+                                    <span><em class="duration-data ">(Toute la journée: Samedi)</em></span>
+                                </div>
+                                <div class="evcal_event_types">
+                                    <div class="evcal_event_type1 cer-small-font">
+                                        <span class="ceremonie-label opacity7"><em><i>Type de Manifestation :
+                                                </i></em></span>
+                                        <div class="mani-data"><i>Cérémonie de graduation</i></div>
+                                    </div>
+                                    <div class="evcal_event_type2 cer-small-font">
+                                        <span class="ceremonie-label opacity7"><em><i>Thématique:</i></em></span>
+                                        <div class="mani-data"><i>TIC</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ceremonie-video-contanier">
+                            <video class="ceremonie-video" controls>
+                                <source src="videos/test.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="ceremonie-resume-container">
+                            <h3 class="ceremonie-resume-title">RÉSUMÉ DE L'ÉVÈNEMENT</h3>
+                            <p class="ceremonie-resume">
+                                Le master MQL (Master Qualité du Logiciel) de la Faculté des Sciences Dhar EL Mahraz (FSDM)
+                                de Fès – Université Sidi Mohamed Ben Abdellah, Sous le patronage et l’assistance du Doyen de
+                                la FSDM, le Professeur Mohammed BENLEMLIH et la coordination du professeur Noureddine
+                                CHENFOUR, organise la deuxième édition de la Cérémonie de Remise des Diplômes au profit des
+                                lauréats de la promotion 2015 du Master MQL, le Samedi 14 Mai 2016 au Centre de Conférences
+                                de la Faculté des Sciences Dhar El Mahraz-Fès.
+                            </p>
+                            <p class="ceremonie-resume">
+                                Comme tous les ans, l’année universitaire 2014-2015 était une année d’intégration par
+                                excellence à travers multiples compagnes de stages coorganisées avec les plus grandes
+                                multinationales installées au Maroc ; en l’occurrence Capgemini, CGI, Atos et Accenture. Les
+                                débouchés de la formation MQL correspondent parfaitement aux objectifs de celles-ci. Ainsi,
+                                Le principal « client »MQL se trouve dans tous les parcs d’activités offshore et Outsourcing
+                                du Maroc. Nous citons principalement : Casablanca Nearshore Park et Rabat Technopolis. Les
+                                lauréats MQL s’intègrent aussi dans toute structure active en développement ou ayant un
+                                besoin quelconque en développement informatique dans les deux secteurs privé et public.
+                            </p>
+                            <p class="ceremonie-resume">
+                                Ainsi, depuis mi-juillet 2015, date des de l’annonce des résultats de la promotion
+                                2013-2015, jusqu’au mois de Septembre 2015, 27 lauréats (sur une promotion de 30 étudiants)
+                                avaient déjà signé un contrat CDI avec des grandes multinationales : Capgemini,Atos, CGI,
+                                Accenture,…
+                            </p>
+                            <p class="ceremonie-resume">
+                                Cette cérémonie sera une grande occasion pour l’intégration et la rencontre entre les
+                                étudiants et les lauréats MQL 2007-2016. C’est aussi l’occasion de célébrer une année
+                                d’existence de l’association MQLplus. Les étudiants de la promotion 2014, avaient déjà pris
+                                l’année dernière l’initiative de créer une association visant à développer un cadre de
+                                regroupement des lauréats du master MQL de la Faculté des Sciences Dhar EL Mahraz, Fès.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="evnt2" class="ceremonies-container">
+                    <h2 class="ceremonie-date">JUIN, 2017</h2>
+                    <div class="ceremonie-container">
+                        <div class="ceremonie-head">
+                            <div class="ceremonie-planning">
+                                <div class="ceremonie-day">SAM</div>
+                                <div class="ceremonie-day-mounth">16</div>
+                                <div class="ceremonie-mounth">Maï</div>
+                            </div>
+                            <div class="ceremonie-data">
+                                <div class="cermonie-title">Cérémonie de Remise des Diplômes Master MQL</div>
+                                <div class="ceremonie-duration opacity7 cer-small-font">
+                                    <svg id="Capa_1" enable-background="new 0 0 443.294 443.294" height="14px"
+                                        viewBox="0 0 443.294 443.294" width="14px" xmlns="http://www.w3.org/2000/svg">
+                                        <path style="fill:#8c8c8c;opacity:0.7"
+                                            d="m221.647 0c-122.214 0-221.647 99.433-221.647 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647-99.433-221.647-221.647-221.647zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z" />
+                                        <path style="fill:#8c8c8c;opacity:0.7"
+                                            d="m235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z" />
+                                        </svg>
+                                    <span><em class="duration-data ">(Toute la journée: Samedi)</em></span>
+                                </div>
+                                <div class="evcal_event_types">
+                                    <div class="evcal_event_type1 cer-small-font">
+                                        <span class="ceremonie-label opacity7"><em><i>Type de Manifestation :
+                                                </i></em></span>
+                                        <div class="mani-data"><i>Cérémonie de graduation</i></div>
+                                    </div>
+                                    <div class="evcal_event_type2 cer-small-font">
+                                        <span class="ceremonie-label opacity7"><em><i>Thématique:</i></em></span>
+                                        <div class="mani-data"><i>TIC</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ceremonie-video-contanier">
+                            <video class="ceremonie-video" controls>
+                                <source src="videos/test.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="ceremonie-resume-container">
+                            <h3 class="ceremonie-resume-title">RÉSUMÉ DE L'ÉVÈNEMENT</h3>
+                            <p class="ceremonie-resume">
+                                Le master MQL (Master Qualité du Logiciel) de la Faculté des Sciences Dhar EL Mahraz (FSDM)
+                                de Fès – Université Sidi Mohamed Ben Abdellah, Sous le patronage et l’assistance du Doyen de
+                                la FSDM, le Professeur Mohammed BENLEMLIH et la coordination du professeur Noureddine
+                                CHENFOUR, organise la deuxième édition de la Cérémonie de Remise des Diplômes au profit des
+                                lauréats de la promotion 2015 du Master MQL, le Samedi 14 Mai 2016 au Centre de Conférences
+                                de la Faculté des Sciences Dhar El Mahraz-Fès.
+                            </p>
+                            <p class="ceremonie-resume">
+                                Comme tous les ans, l’année universitaire 2014-2015 était une année d’intégration par
+                                excellence à travers multiples compagnes de stages coorganisées avec les plus grandes
+                                multinationales installées au Maroc ; en l’occurrence Capgemini, CGI, Atos et Accenture. Les
+                                débouchés de la formation MQL correspondent parfaitement aux objectifs de celles-ci. Ainsi,
+                                Le principal « client »MQL se trouve dans tous les parcs d’activités offshore et Outsourcing
+                                du Maroc. Nous citons principalement : Casablanca Nearshore Park et Rabat Technopolis. Les
+                                lauréats MQL s’intègrent aussi dans toute structure active en développement ou ayant un
+                                besoin quelconque en développement informatique dans les deux secteurs privé et public.
+                            </p>
+                            <p class="ceremonie-resume">
+                                Ainsi, depuis mi-juillet 2015, date des de l’annonce des résultats de la promotion
+                                2013-2015, jusqu’au mois de Septembre 2015, 27 lauréats (sur une promotion de 30 étudiants)
+                                avaient déjà signé un contrat CDI avec des grandes multinationales : Capgemini,Atos, CGI,
+                                Accenture,…
+                            </p>
+                            <p class="ceremonie-resume">
+                                Cette cérémonie sera une grande occasion pour l’intégration et la rencontre entre les
+                                étudiants et les lauréats MQL 2007-2016. C’est aussi l’occasion de célébrer une année
+                                d’existence de l’association MQLplus. Les étudiants de la promotion 2014, avaient déjà pris
+                                l’année dernière l’initiative de créer une association visant à développer un cadre de
+                                regroupement des lauréats du master MQL de la Faculté des Sciences Dhar EL Mahraz, Fès.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="evnt3" class="ceremonies-container">
+                    <h2 class="ceremonie-date">JUILLET, 2018</h2>
+                    <div class="ceremonie-container">
+                        <div class="ceremonie-head">
+                            <div class="ceremonie-planning">
+                                <div class="ceremonie-day">SAM</div>
+                                <div class="ceremonie-day-mounth">16</div>
+                                <div class="ceremonie-mounth">Maï</div>
+                            </div>
+                            <div class="ceremonie-data">
+                                <div class="cermonie-title">Cérémonie de Remise des Diplômes Master MQL</div>
+                                <div class="ceremonie-duration opacity7 cer-small-font">
+                                    <svg id="Capa_1" enable-background="new 0 0 443.294 443.294" height="14px"
+                                        viewBox="0 0 443.294 443.294" width="14px" xmlns="http://www.w3.org/2000/svg">
+                                        <path style="fill:#8c8c8c;opacity:0.7"
+                                            d="m221.647 0c-122.214 0-221.647 99.433-221.647 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647-99.433-221.647-221.647-221.647zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z" />
+                                        <path style="fill:#8c8c8c;opacity:0.7"
+                                            d="m235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z" />
+                                        </svg>
+                                    <span><em class="duration-data ">(Toute la journée: Samedi)</em></span>
+                                </div>
+                                <div class="evcal_event_types">
+                                    <div class="evcal_event_type1 cer-small-font">
+                                        <span class="ceremonie-label opacity7"><em><i>Type de Manifestation :
+                                                </i></em></span>
+                                        <div class="mani-data"><i>Cérémonie de graduation</i></div>
+                                    </div>
+                                    <div class="evcal_event_type2 cer-small-font">
+                                        <span class="ceremonie-label opacity7"><em><i>Thématique:</i></em></span>
+                                        <div class="mani-data"><i>TIC</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ceremonie-video-contanier">
+                            <video class="ceremonie-video" controls>
+                                <source src="videos/test.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="ceremonie-resume-container">
+                            <h3 class="ceremonie-resume-title">RÉSUMÉ DE L'ÉVÈNEMENT</h3>
+                            <p class="ceremonie-resume">
+                                Le master MQL (Master Qualité du Logiciel) de la Faculté des Sciences Dhar EL Mahraz (FSDM)
+                                de Fès – Université Sidi Mohamed Ben Abdellah, Sous le patronage et l’assistance du Doyen de
+                                la FSDM, le Professeur Mohammed BENLEMLIH et la coordination du professeur Noureddine
+                                CHENFOUR, organise la deuxième édition de la Cérémonie de Remise des Diplômes au profit des
+                                lauréats de la promotion 2015 du Master MQL, le Samedi 14 Mai 2016 au Centre de Conférences
+                                de la Faculté des Sciences Dhar El Mahraz-Fès.
+                            </p>
+                            <p class="ceremonie-resume">
+                                Comme tous les ans, l’année universitaire 2014-2015 était une année d’intégration par
+                                excellence à travers multiples compagnes de stages coorganisées avec les plus grandes
+                                multinationales installées au Maroc ; en l’occurrence Capgemini, CGI, Atos et Accenture. Les
+                                débouchés de la formation MQL correspondent parfaitement aux objectifs de celles-ci. Ainsi,
+                                Le principal « client »MQL se trouve dans tous les parcs d’activités offshore et Outsourcing
+                                du Maroc. Nous citons principalement : Casablanca Nearshore Park et Rabat Technopolis. Les
+                                lauréats MQL s’intègrent aussi dans toute structure active en développement ou ayant un
+                                besoin quelconque en développement informatique dans les deux secteurs privé et public.
+                            </p>
+                            <p class="ceremonie-resume">
+                                Ainsi, depuis mi-juillet 2015, date des de l’annonce des résultats de la promotion
+                                2013-2015, jusqu’au mois de Septembre 2015, 27 lauréats (sur une promotion de 30 étudiants)
+                                avaient déjà signé un contrat CDI avec des grandes multinationales : Capgemini,Atos, CGI,
+                                Accenture,…
+                            </p>
+                            <p class="ceremonie-resume">
+                                Cette cérémonie sera une grande occasion pour l’intégration et la rencontre entre les
+                                étudiants et les lauréats MQL 2007-2016. C’est aussi l’occasion de célébrer une année
+                                d’existence de l’association MQLplus. Les étudiants de la promotion 2014, avaient déjà pris
+                                l’année dernière l’initiative de créer une association visant à développer un cadre de
+                                regroupement des lauréats du master MQL de la Faculté des Sciences Dhar EL Mahraz, Fès.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="evnt4" class="ceremonies-container">
+                    <h2 class="ceremonie-date">Août, 2019</h2>
+                    <div class="ceremonie-container">
+                        <div class="ceremonie-head">
+                            <div class="ceremonie-planning">
+                                <div class="ceremonie-day">SAM</div>
+                                <div class="ceremonie-day-mounth">16</div>
+                                <div class="ceremonie-mounth">Maï</div>
+                            </div>
+                            <div class="ceremonie-data">
+                                <div class="cermonie-title">Cérémonie de Remise des Diplômes Master MQL</div>
+                                <div class="ceremonie-duration opacity7 cer-small-font">
+                                    <svg id="Capa_1" enable-background="new 0 0 443.294 443.294" height="14px"
+                                        viewBox="0 0 443.294 443.294" width="14px" xmlns="http://www.w3.org/2000/svg">
+                                        <path style="fill:#8c8c8c;opacity:0.7"
+                                            d="m221.647 0c-122.214 0-221.647 99.433-221.647 221.647s99.433 221.647 221.647 221.647 221.647-99.433 221.647-221.647-99.433-221.647-221.647-221.647zm0 415.588c-106.941 0-193.941-87-193.941-193.941s87-193.941 193.941-193.941 193.941 87 193.941 193.941-87 193.941-193.941 193.941z" />
+                                        <path style="fill:#8c8c8c;opacity:0.7"
+                                            d="m235.5 83.118h-27.706v144.265l87.176 87.176 19.589-19.589-79.059-79.059z" />
+                                        </svg>
+                                    <span><em class="duration-data ">(Toute la journée: Samedi)</em></span>
+                                </div>
+                                <div class="evcal_event_types">
+                                    <div class="evcal_event_type1 cer-small-font">
+                                        <span class="ceremonie-label opacity7"><em><i>Type de Manifestation :
+                                                </i></em></span>
+                                        <div class="mani-data"><i>Cérémonie de graduation</i></div>
+                                    </div>
+                                    <div class="evcal_event_type2 cer-small-font">
+                                        <span class="ceremonie-label opacity7"><em><i>Thématique:</i></em></span>
+                                        <div class="mani-data"><i>TIC</i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ceremonie-video-contanier">
+                            <video class="ceremonie-video" controls>
+                                <source src="videos/test.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <div class="ceremonie-resume-container">
+                            <h3 class="ceremonie-resume-title">RÉSUMÉ DE L'ÉVÈNEMENT</h3>
+                            <p class="ceremonie-resume">
+                                Le master MQL (Master Qualité du Logiciel) de la Faculté des Sciences Dhar EL Mahraz (FSDM)
+                                de Fès – Université Sidi Mohamed Ben Abdellah, Sous le patronage et l’assistance du Doyen de
+                                la FSDM, le Professeur Mohammed BENLEMLIH et la coordination du professeur Noureddine
+                                CHENFOUR, organise la deuxième édition de la Cérémonie de Remise des Diplômes au profit des
+                                lauréats de la promotion 2015 du Master MQL, le Samedi 14 Mai 2016 au Centre de Conférences
+                                de la Faculté des Sciences Dhar El Mahraz-Fès.
+                            </p>
+                            <p class="ceremonie-resume">
+                                Comme tous les ans, l’année universitaire 2014-2015 était une année d’intégration par
+                                excellence à travers multiples compagnes de stages coorganisées avec les plus grandes
+                                multinationales installées au Maroc ; en l’occurrence Capgemini, CGI, Atos et Accenture. Les
+                                débouchés de la formation MQL correspondent parfaitement aux objectifs de celles-ci. Ainsi,
+                                Le principal « client »MQL se trouve dans tous les parcs d’activités offshore et Outsourcing
+                                du Maroc. Nous citons principalement : Casablanca Nearshore Park et Rabat Technopolis. Les
+                                lauréats MQL s’intègrent aussi dans toute structure active en développement ou ayant un
+                                besoin quelconque en développement informatique dans les deux secteurs privé et public.
+                            </p>
+                            <p class="ceremonie-resume">
+                                Ainsi, depuis mi-juillet 2015, date des de l’annonce des résultats de la promotion
+                                2013-2015, jusqu’au mois de Septembre 2015, 27 lauréats (sur une promotion de 30 étudiants)
+                                avaient déjà signé un contrat CDI avec des grandes multinationales : Capgemini,Atos, CGI,
+                                Accenture,…
+                            </p>
+                            <p class="ceremonie-resume">
+                                Cette cérémonie sera une grande occasion pour l’intégration et la rencontre entre les
+                                étudiants et les lauréats MQL 2007-2016. C’est aussi l’occasion de célébrer une année
+                                d’existence de l’association MQLplus. Les étudiants de la promotion 2014, avaient déjà pris
+                                l’année dernière l’initiative de créer une association visant à développer un cadre de
+                                regroupement des lauréats du master MQL de la Faculté des Sciences Dhar EL Mahraz, Fès.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
